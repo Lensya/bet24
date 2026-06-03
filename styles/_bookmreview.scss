@@ -1,0 +1,1078 @@
+.review-banner {
+    background-color: rgba(100, 48, 148, 0.05);
+    background-image: url(../images/review/review-banner.png);
+    background-repeat: no-repeat;
+    background-position: right 0;
+    background-size: auto 100%;
+    padding: 24px 0 54px;
+
+
+    .breadcrumbs--in-page {
+        margin-bottom: 32px;
+    }
+
+    .bookmaker-col {
+        width: 67%;
+
+        h1 {
+            font-size: 60px;
+            line-height: 64px;
+            margin-bottom: 32px;
+            font-weight: 900;
+
+            img {
+                width: 64px;
+                margin-right: 24px;
+            }
+        }
+
+        p {
+            margin-bottom: 24px;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+
+        .anchor-menu {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 54px;
+            padding-bottom: 34px;
+            border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+            a {
+                color: $mainColor;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+
+    }
+
+    .review-banner-row {
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .bookmaker-review__rating>.d-flex {
+        height: 48px;
+        align-items: center;
+    }
+
+    .rating__body {
+        margin-left: 10px;
+        width: 144px;
+    }
+
+    .bonus-col {
+        background-image: url(../images/review/yellow.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: contain;
+        width: 220px;
+        flex-shrink: 0;
+        padding: 24px 18px 24px 20px;
+
+        .bonus-head {
+            height: 104px;
+
+            .bonus-sum {
+                font-size: 40px;
+                font-family: CeraPro;
+                line-height: 40px;
+                letter-spacing: -0.25px;
+                display: block;
+            }
+
+            h4 {
+                margin-bottom: 8px;
+            }
+
+        }
+
+        .bonus-body {
+            padding-top: 24px;
+
+            strong {
+                display: block;
+            }
+
+            ol {
+                padding-left: 20px;
+                margin-top: 13px;
+                margin-bottom: 25px;
+
+                li {
+                    list-style: decimal outside;
+                    font-size: 14px;
+                    line-height: 1.1;
+                    margin-bottom: 4px;
+                }
+            }
+
+            .button {
+                margin: auto;
+            }
+        }
+    }
+
+    .play-btn {
+        margin-right: 28px;
+        text-align: center;
+
+        .button {
+            padding: 16px 34px;
+        }
+    }
+
+}
+
+
+.pros-cons {
+    padding: 44px 0 34px;
+
+    h2 {
+        margin-bottom: 18px;
+    }
+}
+
+.pros-cons_row {
+    justify-content: space-between;
+
+    .col {
+        width: 43%;
+    }
+
+    .minus-head,
+    .plus-head {
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 14px;
+
+        strong {
+            font-family: CeraPro;
+            font-weight: 900;
+        }
+    }
+
+    .plus-list,
+    .minus-list {
+        li {
+            margin-bottom: 12px;
+            padding-left: 40px;
+            position: relative;
+            line-height: 1.25;
+
+            &::before {
+                content: "+";
+                position: absolute;
+                left: 8px;
+                top: -1px;
+                color: rgb(78 82 145 / 30%);
+                font-size: 23px;
+            }
+        }
+    }
+
+    .minus-list li::before {
+        content: '\2013';
+    }
+}
+
+.bonuses {
+    padding: 62px 0 52px;
+}
+
+
+.info-bookmaker {
+    padding: 58px 0 44px;
+
+    h2 {
+        margin-bottom: 8px;
+    }
+}
+
+.info-wrapper {
+
+    .info-item {
+        border-top: 1px solid #F0F0F0;
+        padding: 12px 0;
+
+        &.info-item-vip {
+            border-color: rgb(250 200 0 / 40%);
+        }
+
+        &:first-child {
+            border-top: none;
+        }
+
+        >div:first-child {
+            width: 28px;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+
+        >div:nth-child(2) {
+            width: 224px;
+            flex-shrink: 0;
+            // margin-right: 12px;
+            font-weight: 700;
+        }
+
+        >div:nth-child(3) {
+            width: calc(100% - 264px);
+        }
+    }
+
+    .countries {
+        display: inline-flex;
+        gap: 10px;
+
+        &::after {
+            content: "...";
+            height: 24px;
+            width: 24px;
+            display: inline-block;
+            border-radius: 2px;
+            background: rgba(20, 27, 145, .05);
+            font-size: 24px;
+            line-height: 10px;
+            text-align: center;
+            color: rgb(78 82 145 / 30%);
+        }
+    }
+
+    .country {
+        display: inline-flex;
+        align-items: center;
+        padding: 2px 6px;
+        gap: 8px;
+        border-radius: 2px;
+        background: rgba(20, 27, 145, .05);
+        line-height: 1;
+
+
+        .flag {
+            width: 16px;
+            height: 12px;
+            background-image: url(../images/review/flags.png);
+            background-repeat: no-repeat;
+        }
+
+        &.country-france .flag {
+            background-position: -32px -48px;
+        }
+
+        &.country-germany .flag {
+            background-position: -80px -48px;
+        }
+
+        &.country-russia .flag {
+            background-position: -64px -108px;
+        }
+    }
+
+    .networks {
+        display: inline-flex;
+        gap: 10px;
+
+        >div {
+            display: inline-flex;
+            align-items: center;
+            padding: 2px 6px;
+            gap: 8px;
+            border-radius: 2px;
+            background: rgba(20, 27, 145, .05);
+            line-height: 1;
+        }
+    }
+
+
+}
+
+.download {
+    border-radius: 6px;
+    width: 1080px;
+    margin: auto;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+
+    h2 {
+        color: #fff;
+        margin-bottom: 24px;
+        line-height: 1;
+    }
+
+    .download__image {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        height: 100%;
+        right: 0;
+        bottom: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .download-btn {
+        display: flex;
+        gap: 12px;
+        color: #fff;
+        margin-right: 32px;
+
+        &.disabled {
+            opacity: 0.2;
+        }
+
+        a {
+            display: block;
+            color: #fff;
+
+            &.underline {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+.reviews {
+
+    h2 {
+        margin-bottom: 18px;
+    }
+
+    .all-reviews__list {
+        margin-bottom: 48px;
+    }
+
+    .see-all-btn {
+        margin-left: 264px;
+    }
+
+    .write-review {
+        border-top: 1px solid #f0f0f0;
+        margin-top: 24px;
+        padding-top: 40px;
+
+        h2 {
+            margin-bottom: 8px;
+        }
+    }
+
+    &.empty {
+        .write-review {
+            border-top: none;
+            margin-top: 0;
+            padding-top: 0;
+
+            h2 {
+                display: none;
+            }
+        }
+
+        .new-review .writer-info strong {
+            border-bottom: none;
+        }
+
+        .new-review textarea {
+            height: 48px;
+        }
+    }
+
+}
+
+.text-content {
+    padding-top: 0;
+
+    table {
+        width: 100%;
+    }
+
+}
+
+.text-content__side-padding {
+    padding-left: 264px;
+    position: relative;
+
+    &::before {
+        content: '';
+        height: 3px;
+        background-color: $yellowColor;
+        width: 220px;
+        position: absolute;
+        top: 6px;
+        left: 0;
+    }
+}
+
+
+
+.welcome-bonus {
+    position: relative;
+
+    &__image {
+        text-align: center;
+        background: #ec3d32;
+        // img{
+        // width: 100%;
+        // }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+
+        .welcome-bonus-button {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: -0.2px;
+            margin-right: 66px;
+            color: #000;
+            width: 366px;
+            justify-content: space-between;
+            height: auto;
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+                background: #fff;
+                color: $mainColor;
+            }
+        }
+
+    }
+}
+
+
+.screenshots {
+    padding: 52px 0 30px;
+
+    h2 {
+        margin-bottom: 22px;
+    }
+}
+
+.screenshots-slider {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 50px;
+
+    img {
+        border-radius: 6px;
+    }
+
+    .swiper-pagination {
+        text-align: left;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #5a1f90;
+        opacity: .2;
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        opacity: 1;
+    }
+}
+
+
+.payments {
+    // padding-bottom: 52px;
+
+    &-table {
+        margin-bottom: 32px;
+    }
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    .button {
+        width: 680px;
+        margin: auto;
+    }
+
+    .payments-wrap {
+        margin-bottom: 72px;
+    }
+}
+
+
+.payments-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.80);
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &-head {
+        width: 227px;
+        flex-shrink: 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        height: 87px;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        line-height: 24px;
+
+        .payments-logo {
+            width: 64px;
+            text-align: center;
+            margin-right: 7px;
+
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    &-body {
+        width: calc(100% - 227px);
+        display: flex;
+
+        >div {
+            height: 87px;
+            width: 50%;
+            padding: 33px 42px;
+
+            &:first-child {
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .label {
+                color: rgba(0, 0, 0, 0.40);
+                margin-right: 8px;
+            }
+
+            .value {
+                margin-right: 10px;
+                min-width: 38px;
+                display: inline-block;
+            }
+        }
+    }
+
+    &.first-payments-row {
+        .payments-row-head {
+            height: 54px;
+        }
+
+        .payments-row-body {
+            >div {
+                height: 54px;
+                padding: 15px 42px;
+            }
+        }
+    }
+
+}
+
+
+
+@media (min-width: 992px) {
+    .screenshots-slider .swiper-slide {
+        max-width: 46.75rem;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 0 46.75rem;
+        flex: 1 0 46.75rem;
+    }
+
+
+
+}
+
+@media (min-width: 768px) {
+    .only-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1400px) {
+
+    .review-banner {
+        background-position: 125% 0;
+
+        .bookmaker-col p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    .download {
+        width: 96%;
+        margin: 0 2%;
+    }
+
+
+    .welcome-bonus .container .welcome-bonus-button {
+        margin-right: 0;
+    }
+
+
+}
+
+
+
+
+@media (max-width: 991px) {
+
+    .review-banner {
+        background-image: none;
+
+        .bookmaker-col h1 {
+            font-size: 52px;
+        }
+
+        .bookmaker-col .anchor-menu a {
+            font-size: 15px;
+            line-height: 1.2;
+        }
+
+    }
+
+    .info-wrapper .country:nth-child(4),
+    .info-wrapper .country:nth-child(5),
+    .info-wrapper .country:nth-child(6) {
+        display: none;
+    }
+
+    // .text-content blockquote {
+    //     padding: 40px;
+    // }
+
+    .welcome-bonus .container .welcome-bonus-button {
+        font-size: 24px;
+        width: 320px;
+    }
+
+    .payments-row-body>div {
+        padding: 33px 15px;
+
+        .value {
+            margin-right: 6px;
+            min-width: auto;
+        }
+
+    }
+
+    .download .download__image img {
+        width: auto;
+        max-width: max-content;
+    }
+
+}
+
+
+
+@media (max-width: 767px) {
+
+    .anchor-menu.anchor-menu-desktop,
+    .play-desktop {
+        display: none !important;
+    }
+
+    .review-banner-row {
+        flex-wrap: wrap;
+    }
+
+    .review-banner {
+        background-color: transparent;
+        padding: 16px 0 0;
+
+        .bookmaker-col {
+            width: 100%;
+            border-radius: 6px;
+            background: #F3F4FA;
+            padding: 16px;
+            margin-bottom: 16px;
+
+            h1 {
+                text-align: center;
+                font-size: 40px;
+                line-height: 1;
+                margin-bottom: 24px;
+
+                img {
+                    margin: 0 auto 16px;
+                    display: block;
+                }
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+
+        }
+
+        .play-btn {
+            margin: 0 0 16px;
+
+            .button {
+                padding: 16px 34px;
+                margin: auto;
+            }
+        }
+
+        .bookmaker-review__rating>.d-flex {
+            height: auto;
+            align-items: flex-start;
+            flex-direction: column;
+
+            .h2 {
+                margin-bottom: 12px;
+            }
+        }
+
+        .rating__body {
+            margin-left: 0;
+        }
+
+        .bonus-col {
+            background-image: none;
+            background-color: #FFE22C;
+            width: 100%;
+            padding: 0;
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 0 auto 32px;
+
+            .bonus-body .button {
+                width: 100%;
+            }
+
+            .bonus-body {
+                padding-top: 13px;
+                padding: 5px 16px 16px;
+
+                ol {
+                    padding-left: 20px;
+                    margin-top: 8px;
+                    margin-bottom: 18px;
+                    max-width: 256px;
+                }
+            }
+
+            .bonus-head {
+                height: 100px;
+                background: url(../images/review/divider.jpeg) 0 bottom no-repeat;
+                background-size: 100% auto;
+                padding: 16px;
+
+                h4 {
+                    margin-bottom: 8px;
+                    line-height: 1;
+                }
+            }
+        }
+
+        .breadcrumbs--in-page {
+            margin-bottom: 16px;
+        }
+
+    }
+
+    .anchor-menu-mobile {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        margin: 0 -16px;
+
+        a {
+            display: block;
+            color: $mainColor;
+            font-family: CeraPro;
+            font-weight: 700;
+            line-height: 1;
+            padding: 16px 18px;
+            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            position: relative;
+            &:hover {
+                color: #000;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                background: url(../images/review/arrow.svg) no-repeat 0 center;
+                width: 8px;
+                height: 100%;
+                top: 0;
+                right: 18px;
+            }
+
+            span {
+                color: rgba(100, 48, 148, 0.40);
+            }
+        }
+
+    }
+
+    .pros-cons {
+        padding: 26px 0 10px;
+    }
+
+    .pros-cons_row {
+        flex-wrap: wrap;
+
+        .col {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    .info-bookmaker {
+        padding: 30px 0 24px;
+    }
+
+    .info-wrapper {
+
+        .info-item {
+            flex-wrap: wrap;
+            padding: 8px 0;
+
+            >div:nth-child(2) {
+                width: calc(100% - 40px);
+            }
+
+            >div:nth-child(3) {
+                width: 100%;
+                padding-left: 40px;
+            }
+        }
+
+        .country:nth-child(3) {
+            display: none;
+        }
+    }
+
+    .bonuses {
+        padding: 32px 0 24px;
+
+        h2 {
+
+            font-size: 32px;
+        }
+    }
+
+    .download {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        height: 100vw;
+        padding: 19px;
+
+        .download-btn {
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            img {
+                max-width: 120px;
+            }
+        }
+
+        .download__image img {
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .reviews .write-review {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 24px;
+
+        h2 {
+            display: none;
+        }
+    }
+
+
+    .reviews .see-all-btn {
+        margin-left: 0;
+    }
+
+
+    .text-content__side-padding {
+        padding-left: 0;
+
+        &::before {
+            height: 1px;
+            background-color: rgba(0, 0, 0, .1);
+            width: 100%;
+            top: -16px;
+        }
+
+    }
+
+    .welcome-bonus .container {
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-left: 24px;
+
+        .welcome-bonus-button {
+            font-size: 16px;
+            width: 200px;
+            padding: 10px;
+            line-height: 1;
+            margin-bottom: 34px;
+
+        }
+
+    }
+
+    .payments .payments-wrap {
+        margin-bottom: 30px;
+    }
+
+    .payments-row {
+        flex-wrap: wrap;
+
+        &-head {
+            width: 100%;
+            height: 65px;
+            border-right: none;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                background: url(../images/review/arrow.svg) no-repeat 0 center;
+                width: 8px;
+                height: 100%;
+                top: 0;
+                right: 5px;
+                transform: rotate(90deg);
+            }
+
+            &.is-active::after {
+                transform: rotate(-90deg);
+            }
+        }
+
+        &.first-payments-row {
+            border-bottom: none;
+            display: none;
+
+            .payments-row-head::after {
+                content: none;
+            }
+        }
+
+        &-body {
+            width: 100%;
+            flex-wrap: wrap;
+            height: 0;
+            overflow: hidden;
+
+            >div {
+                width: 100%;
+                height: 45px;
+                padding: 10px 0 10px 15px;
+                text-align: right;
+                font-size: 14px;
+            }
+
+            >div:first-child {
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+                &::before {
+                    content: 'Ввод';
+                    float: left;
+                    color: rgba(0, 0, 0, 0.40);
+                }
+            }
+
+            >div:last-child {
+                &::before {
+                    content: 'Вывод';
+                    float: left;
+                    color: rgba(0, 0, 0, 0.40);
+                }
+            }
+        }
+
+    }
+
+    .payments h2 {
+        margin-bottom: 6px;
+    }
+
+    .payments .button {
+        width: 100%;
+    }
+
+    .text-content h2:not([class]) {
+        margin-bottom: 24px;
+    }
+
+    .text-content h3:not([class]) {
+        font-size: 20px;
+    }
+
+    .screenshots-slider {
+        padding-bottom: 40px;
+    }
+
+    .screenshots {
+        padding: 32px 0 13px;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .review-banner .bookmaker-col h1 {
+        font-size: 32px;
+    }
+
+    .review-banner .play-btn .button {
+        width: 100%;
+    }
+
+    .review-banner .bookmaker-col p {
+        margin-bottom: 18px;
+    }
+
+
+
+    .download .container {
+        padding: 0;
+    }
+}

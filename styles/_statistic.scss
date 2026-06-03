@@ -1,0 +1,697 @@
+.fighter-statistic {
+    background-color: #1C1C1C;
+    line-height: 1.125rem;
+    font-family: CeraPro;
+    font-weight: 500;
+    font-size: .875rem;
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.fighter-statistic__heading {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .4);
+    margin-bottom: 12px;
+}
+
+.fighter-statistic__info {
+    border-bottom: 1px solid rgba(255, 255, 255, .08)
+}
+
+.fighter-statistic__info-item {
+    white-space: nowrap
+}
+
+.fighter-statistic__col {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.fighter-statistic__base {
+    border-top: 1px solid rgba(255, 255, 255, .08)
+}
+
+.fighter-statistic__table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+    font-size: 1rem;
+    table-layout: fixed
+}
+
+.fighter-statistic__table tr>* {
+    padding-top: .25rem;
+    padding-bottom: .25rem
+}
+
+.fighter-statistic__table tr:first-child>* {
+    padding-top: 0
+}
+
+.fighter-statistic__table tr:last-child>* {
+    padding-bottom: 0
+}
+
+.fighter-statistic__table th {
+    text-align: left;
+    // font-size: .875rem;
+    font-weight: 500;
+
+    &:nth-child(3) th,
+    &:nth-child(4) th {
+        font-size: .875rem;
+    }
+}
+
+.fighter-statistic__table th.win-color {
+    color: #0070AF
+}
+
+.fighter-statistic__table th.lose-color {
+    color: #FF4960
+}
+
+.fighter-statistic__table td,
+.fighter-statistic__table th {
+    vertical-align: middle
+}
+
+.fighter-statistic__labels {
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 91px
+}
+
+.fighter-statistic__labels .fighter-statistic__label:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.fighter-statistic__labels .fighter-statistic__label:last-child .progress {
+    min-width: .5rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0
+}
+
+.fighter-statistic__label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 35px;
+    max-width: 35px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 35px;
+    flex: 1 0 35px;
+    height: 29px;
+    border-radius: 3px;
+    mix-blend-mode: normal
+}
+
+.fighter-statistic__label.percent {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 100%;
+    margin-left: .25rem;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+.fighter-statistic__label.percent .progress {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: 3px
+}
+
+.fighter-statistic__label.percent .progress:after {
+    content: attr(data-percent);
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    white-space: nowrap;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.fighter-statistic__table.win .fighter-statistic__label.percent .progress:after {
+    color: #0070AF
+}
+
+.fighter-statistic__table.lose .fighter-statistic__label.percent .progress:after {
+    color: #FF4960
+}
+
+.fighter-statistic__table.lose .fighter-statistic__label .progress,
+.fighter-statistic__table.lose .fighter-statistic__labels>.fighter-statistic__label:first-child,
+.fighter-statistic__table.lose td>.fighter-statistic__label {
+    background: linear-gradient(210.2deg, rgba(255, 255, 255, .2) -58.05%, rgba(255, 255, 255, 0) 112.14%), linear-gradient(0deg, #FF4960, #FF4960)
+}
+
+.fighter-statistic__table.win .fighter-statistic__label .progress,
+.fighter-statistic__table.win .fighter-statistic__labels>.fighter-statistic__label:first-child,
+.fighter-statistic__table.win td>.fighter-statistic__label {
+    background: linear-gradient(210.2deg, rgba(255, 255, 255, .5) -58.05%, rgba(255, 255, 255, 0) 112.14%), linear-gradient(0deg, #0070AF, #0070AF)
+}
+
+.fighter-statistic__table.win .fighter-statistic__label .progress.draw,
+.fighter-statistic__table.win .fighter-statistic__labels>.fighter-statistic__label:first-child.draw,
+.fighter-statistic__table.win td>.fighter-statistic__label.draw {
+    background: linear-gradient(210.2deg, rgba(255, 255, 255, .5) -58.05%, rgba(255, 255, 255, 0) 112.14%), linear-gradient(0deg, #828282, #828282)
+}
+
+
+/********/
+
+.col-50 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.fights-list {
+    margin: 0 -15px;
+}
+
+.mma-event-item {
+
+    &__header {
+        padding-bottom: .5rem;
+        border-bottom: 1px solid #EBEBEB;
+        margin-bottom: 22px;
+    }
+
+}
+
+
+.mma-event__heading {
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+
+    .mma-event__date {
+        font-weight: 700;
+    }
+}
+
+.mma-event__num {
+    margin-right: .625rem;
+    font-size: 1.125rem;
+    color: rgba(0, 0, 0, .4)
+}
+
+.mma-event__league {
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+    color: rgba(0, 0, 0, .4)
+}
+
+.mma-event__fighter,
+.mma-event__league-item {
+    display: -ms-flexbox;
+    -webkit-box-align: center
+}
+
+.mma-event__league-item {
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: .25rem;
+    color: rgba(0, 0, 0, .8)
+}
+
+.mma-event__league-item img {
+    max-width: 1.25rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 1.25rem;
+    flex: 1 0 1.25rem;
+    height: auto;
+    margin-left: .5rem;
+    border-radius: .25rem
+}
+
+.mma-event__fighter {
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    color: inherit
+}
+
+.mma-event__carcass,
+.mma-event__video {
+    display: -webkit-box;
+    display: -ms-flexbox
+}
+
+.mma-event__fighter:hover {
+    color: inherit
+}
+
+.mma-event__fighter:first-child {
+    margin-bottom: 12px;
+}
+
+.mma-event__fighter.lose img {
+    border-color: #FF4960
+}
+
+.mma-event__fighter.lose span {
+    color: #FF4960
+}
+
+.mma-event__fighter.win img {
+    border-color: #0070AF
+}
+
+.mma-event__fighter.win span {
+    color: #0070AF
+}
+
+.mma-event__fighter img {
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .25)
+}
+
+.mma-event__fighter span {
+    margin-left: .75rem
+}
+
+.mma-event__carcass.coef-thead>span:first-child,
+.section_review-form .section__header h2 .icon,
+.win__select-current span {
+    margin-right: .75rem;
+}
+
+.mma-event__video {
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    margin-top: 12px;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: .5rem;
+    color: inherit;
+    font-family: CeraPro;
+    font-weight: 500;
+}
+
+.mma-event__video:not([disabled]):hover {
+    border-color: #BD0000;
+    background-color: #BD0000;
+    color: #fff
+}
+
+.mma-event__video[disabled] {
+    opacity: .4;
+    cursor: default
+}
+
+.mma-event__video img {
+    max-width: 2.25rem;
+    height: auto;
+    margin-left: auto
+}
+
+.mma-event__carcass {
+    display: flex;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.mma-event__carcass>span {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.mma-event__carcass>span:first-child {
+    max-width: 2rem;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 2rem;
+    flex: 0 0 2rem
+}
+
+.mma-event__bet-placeholder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-align: center
+}
+
+.mma-event__carcass.coef-thead {
+    font-size: .875rem;
+    color: rgba(0, 0, 0, .4);
+    padding-left: 24px;
+}
+
+.mma-event__carcass.coef-tbody {
+    padding: .5rem 0 .5rem .625rem;
+    background-color: #F3F3F3;
+    border-radius: .5rem;
+    overflow: hidden;
+    font-weight: 700;
+    color: rgba(0, 0, 0, .8)
+}
+
+.mma-event__carcass.coef-tbody>span {
+    border-right: 1px solid rgba(0, 0, 0, .08)
+}
+
+.mma-event__carcass.coef-tbody>span:first-child,
+.mma-event__carcass.coef-tbody>span:last-child {
+    border-right: none
+}
+
+.mma-event__carcass.coef-tbody>span:first-child img {
+    position: relative;
+    border-radius: .5rem;
+    z-index: 10
+}
+
+
+/*******/
+
+
+.fighter-profile__series {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2.75rem;
+    padding-left: 1.125rem;
+    padding-right: 1.5rem;
+    background: #F7F7F7;
+    border-radius: .5rem;
+    font-size: 1.125rem;
+
+    span {
+        font-family: CeraPro;
+        font-weight: 700;
+    }
+}
+
+.fighter-profile__series .bm-tooltip {
+    top: calc(100% - 6px)
+}
+
+.fighter-profile__series ul {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-left: auto
+}
+
+.fighter-profile__fight {
+    max-width: 1.25rem;
+    flex: 0 0 1.25rem;
+    height: 1.25rem;
+    margin-right: .5rem;
+    border-radius: 50%;
+    background: linear-gradient(247deg, rgba(255, 255, 255, 0.50) -74.02%, rgba(255, 255, 255, 0.00) 89.05%), #D8D8D8;
+
+}
+
+.mma-event__heading,
+.mma-event__league {
+    display: -ms-flexbox;
+    -webkit-box-align: center
+}
+
+.fighter-profile__fight.lose {
+    background: linear-gradient(247.28deg, rgba(255, 255, 255, .5) -74.02%, rgba(255, 255, 255, 0) 89.05%), linear-gradient(0deg, #FF4960, #FF4960);
+    opacity: 1
+}
+
+.fighter-profile__fight.win {
+    background: linear-gradient(247.28deg, rgba(255, 255, 255, .5) -74.02%, rgba(255, 255, 255, 0) 89.05%), linear-gradient(0deg, #0070AF, #0070AF);
+    opacity: 1
+}
+
+.fighter-profile__fight.draw {
+    background: linear-gradient(247.28deg, rgba(255, 255, 255, .5) -74.02%, rgba(255, 255, 255, 0) 89.05%), linear-gradient(0deg, #828282, #828282);
+    opacity: 1
+}
+
+.fighter-profile__fight:last-child {
+    margin-right: 0
+}
+
+.fighter-statistic__info-item:first-child {
+    max-width: 12%;
+}
+
+.fighter-statistic__info-item:nth-child(2) {
+    max-width: 15%;
+}
+
+.fighter-statistic__info-item:nth-child(3) {
+    max-width: 18%;
+}
+
+.fighter-statistic__info-item:nth-child(5) {
+    max-width: 23%;
+}
+
+@media (min-width: 568px) {
+
+    .fighter-statistic__table th {
+        width: 45%
+    }
+
+    .fighter-statistic__table td {
+        width: 55%
+    }
+
+    .fighter-statistic__label.percent .progress:after {
+        left: calc(100% + .625rem)
+    }
+
+    .mma-event__fighter img {
+        max-width: 3rem;
+        flex: 1 0 3rem;
+
+    }
+
+}
+
+@media (min-width: 768px) {
+    .mma-event__num {
+        display: none;
+    }
+
+    .fighter-statistic {
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .fighter-statistic__info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-bottom: 1.5rem
+    }
+
+    .fighter-statistic__info-item {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding: 0 .75rem .75rem;
+        border-right: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .fighter-statistic__info-item .fighter-statistic__heading {
+        margin-bottom: 8px;
+    }
+
+    .fighter-statistic__info-item:first-child {
+        padding-left: 0
+    }
+
+    .fighter-statistic__info-item:last-child {
+        padding-right: 0;
+        border-right: none
+    }
+
+    .fighter-statistic__base {
+        margin-top: 1.5rem;
+        padding-top: 1rem
+    }
+
+    .mma-event-item {
+        padding: 10px 16px;
+        margin-bottom: 24px;
+        border-radius: 8px;
+
+        &:nth-child(even) {
+            background: rgba(249, 249, 249, 0.80);
+        }
+    }
+
+    .mma-event__league {
+        margin-left: 1.25rem
+    }
+
+    .mma-event__right {
+        padding-left: 24px;
+    }
+}
+
+
+.mma-event__carcass.coef-tbody {
+    position: relative
+}
+
+.mma-event__carcass.coef-tbody:after {
+    content: attr(data-hover-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #F3F3F3;
+    font-weight: 500;
+    font-family: Ubuntu,sans-serif;
+    color: #4F1A80;
+    opacity: 0;
+    -webkit-transition: opacity .25s;
+    transition: opacity .25s
+}
+
+.mma-event__carcass.coef-tbody:hover:after {
+    opacity: 1
+}
+
+@media (max-width: 767px) {
+
+    .fighter-statistic {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0;
+        border-radius: .5rem;
+        margin-top: 9px;
+        margin-bottom: 48px;
+    }
+
+    .fighter-statistic__heading {
+        font-size: 1rem
+    }
+
+    .fighter-statistic__info-item {
+        padding: 13px 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .fighter-statistic__info-item:last-child {
+        border-bottom: none
+    }
+
+    .fighter-statistic__info-item .fighter-statistic__heading {
+        margin-bottom: .5rem
+    }
+
+    .fighter-statistic__numbers .row>* {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 1rem
+    }
+
+    .fighter-statistic__numbers .row>:first-child {
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem
+    }
+
+    .fighter-statistic__base {
+        padding: 1rem 1rem 1.5rem;
+    }
+
+    .fighter-statistic__table th {
+        font-size: .875rem
+    }
+
+    .fighter-statistic__label.percent .progress:after {
+        left: calc(100% + .5rem);
+
+    }
+
+    .fights-list {
+        margin: 0;
+    }
+
+    .col-50 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .mma-event-item__header {
+        margin-bottom: 16px;
+    }
+    .mma-event-item__body .d-flex {
+        flex-wrap: wrap;
+    }
+
+    .mma-event__fighter img {
+        max-width: 2rem;
+        flex: 1 0 2rem;
+    }
+
+    .mma-event__fighters {
+        margin-bottom: 1.5rem;
+    }
+
+    .mma-event-item {
+        margin-bottom: 24px;
+    }
+
+    .mma-event__heading {
+        justify-content: space-between;
+    }
+
+    .mma-event__league-item {
+        span {
+            display: none;
+        }
+    }
+
+    .mma-event__heading .mma-event__date {
+        font-weight: 400;
+        margin-right: auto;
+    }
+
+    .mma-event__video {
+        padding-right: 1rem;
+    }
+}
+
+

@@ -1,0 +1,1736 @@
+.mma-page-title {
+    padding-top: 72px;
+    padding-bottom: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+        color: #fff;
+        font-weight: 900;
+        font-size: 56px;
+        line-height: 1.1;
+        margin-bottom: 32px;
+        letter-spacing: -0.3px;
+    }
+
+    p {
+        color: #fff;
+        margin-bottom: 60px;
+        max-width: 68%;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+.tabs {
+
+    >li {
+        padding: 0 12px;
+
+        &:first-child {
+            padding: 0 36px 0 0;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 12px;
+                display: block;
+                height: 21px;
+                width: 0.5px;
+                background: rgba(255, 255, 255, 0.60);
+            }
+        }
+    }
+
+    &__item {
+        color: #fff;
+        font-family: CeraPro;
+        font-weight: 700;
+        display: block;
+        white-space: nowrap;
+        padding-bottom: 8px;
+
+    }
+
+    .subtabs {
+        position: absolute;
+        border-radius: 6px;
+        background: #FFF;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.10), 0px 8px 16px 0px rgba(26, 30, 105, 0.10);
+        padding: 10px 16px;
+        top: 100%;
+        left: 10px;
+        width: 165px;
+        display: none;
+        z-index: 2;
+
+        .tabs__item {
+            color: #000;
+        }
+    }
+
+    .tabs__haschild {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -7px;
+            top: 6px;
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid rgba(255, 255, 255, .3);
+            border-left: 2px solid rgba(255, 255, 255, .3);
+            transform: rotate(-135deg);
+        }
+
+    }
+
+}
+
+.fighters {
+
+    &-row {
+        justify-content: space-between;
+        margin-bottom: 48px;
+    }
+
+    &-body {
+        width: calc(100% - 354px);
+        padding-top: 28px;
+
+        h2 {
+            margin-bottom: 18px;
+
+            span {
+                color: rgba(0, 0, 0, 0.40);
+                font-weight: 500;
+            }
+        }
+
+        .fighters-body-head {
+            @media (min-width: 992px) {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+
+        .fighters-list {
+            margin-bottom: 27px;
+        }
+
+        .load-more {
+            margin-bottom: 24px;
+
+            .button {
+                width: 100%;
+            }
+        }
+    }
+
+
+    &-item {
+        display: flex;
+        border-radius: 8px;
+        width: 100%;
+        padding: 14px 16px;
+        margin-bottom: 8px;
+
+
+        .fighter-info {
+            padding: 10px 20px;
+
+            .name {
+                font-size: 22px;
+                font-weight: 700;
+                margin-bottom: 16px;
+                font-family: CeraPro;
+            }
+
+            .insta {
+                margin-bottom: 15px;
+
+                a {
+                    text-decoration: underline;
+                    color: rgba(0, 0, 0, 0.80);
+                    margin-left: 5px;
+                    font-size: 18px;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .link {
+                color: #643094;
+                font-family: CeraPro;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+
+        &:nth-child(even) {
+            background: rgba(249, 249, 249, 0.80);
+        }
+
+        &:hover .fighter-info .link {
+            color: #000;
+        }
+    }
+
+    .fighter-photo {
+        position: relative;
+        padding-right: 27px;
+        flex-shrink: 0;
+
+        &::after {
+            content: '';
+            height: 98px;
+            width: 1px;
+            display: block;
+            background: rgba(0, 0, 0, 0.10);
+            position: absolute;
+            right: 0;
+            top: calc(50% - 46px);
+        }
+
+        img {
+            border-radius: 50%;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    .fighter-stat {
+        position: absolute;
+        right: 0;
+        top: 4px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        >div {
+            width: 58px;
+            height: 56px;
+            font-family: Ubuntu;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 13px 0 0 14px;
+            min-height: 56px;
+            flex-shrink: 0;
+
+            span {
+                display: inline-block;
+                width: 21px;
+                text-align: center;
+            }
+        }
+
+        .win {
+            background: url(../images/mma/mma-blue.svg) 0 0 no-repeat;
+            color: #0070AF;
+        }
+
+        .draw {
+            background: url(../images/mma/mma-grey.svg) 0 0 no-repeat;
+            color: #828282;
+            margin-top: -13px;
+        }
+
+        .lose {
+            background: url(../images/mma/mma-red.svg) 0 0 no-repeat;
+            color: #FF4960;
+            margin-top: -13px;
+        }
+
+        .stat-label {
+            position: relative;
+
+            &::after {
+                content: attr(data-label-text);
+                position: absolute;
+                top: 9px;
+                left: 59px;
+                font-size: 18px;
+                font-weight: 700;
+                font-family: CeraPro;
+                color: inherit;
+
+            }
+
+        }
+
+
+    }
+
+    &-side {
+        width: 330px;
+
+        .fighters-filter {
+            background: linear-gradient(169deg, #F2F2F3 -12.57%, rgba(255, 255, 255, 0.00) 87.58%);
+            padding: 50px 43px;
+        }
+
+        .filter-title {
+            text-align: center;
+            margin-bottom: 40px;
+
+            .icon {
+                border-radius: 10px;
+                background: rgba(100, 48, 148, 0.10);
+                width: 28px;
+                height: 28px;
+                margin: 0 auto 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            span {
+                font-family: CeraPro;
+                font-weight: 900;
+                letter-spacing: -0.2px;
+                font-size: 32px;
+            }
+        }
+
+        .filter-section {
+            margin-bottom: 24px;
+        }
+
+        .filter-section-head {
+            font-family: CeraPro;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 9px;
+        }
+
+        .filter-checkboxes {
+
+            &-item {
+                margin-bottom: 10px;
+            }
+
+            .checkbox-item {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                input {
+                    display: none;
+                }
+            }
+
+            .checkbox__square {
+                display: block;
+                width: 12px;
+                height: 12px;
+                margin-right: .625rem;
+                border-radius: 2px;
+                border: 1px solid rgba(20, 27, 145, 0.10);
+                position: relative;
+
+
+                &::before {
+                    content: url(../images/mma/check.svg);
+                    position: absolute;
+                    top: -6px;
+                    left: 0;
+                    opacity: 0;
+                }
+            }
+
+            .radio__circle {
+                display: block;
+                width: 12px;
+                height: 12px;
+                margin-right: .625rem;
+                border: 1px solid rgba(100, 48, 148, 0.10);
+                position: relative;
+                border-radius: 50%;
+
+                &::before {
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    opacity: 0;
+                    display: block;
+                    background-color: #643094;
+                    border-radius: 50%;
+                }
+            }
+
+            .checkbox-item input[type=radio]:checked+.radio__circle:before,
+            .checkbox-item input[type=checkbox]:checked+.checkbox__square:before {
+                opacity: 1;
+            }
+
+            .checkbox__text {
+                font-size: 14px;
+                line-height: 1.1;
+                display: inline-flex;
+                align-items: center;
+
+                img {
+                    width: 1.125rem;
+                    height: auto;
+                    margin-right: .5rem;
+                    border-radius: 50%;
+                }
+            }
+
+            .link-more {
+                color: #643094;
+                font-size: 14px;
+                margin-left: 24px;
+            }
+
+
+        }
+
+        .range__slider {
+            width: 92%;
+
+            .noUi-connect {
+                background: #643094 !important;
+            }
+
+            .noUi-origin .noUi-handle:after,
+            .noUi-origin .noUi-handle:before {
+                display: none;
+            }
+
+            .noUi-origin .noUi-handle {
+                width: 20px !important;
+                height: 20px !important;
+                border-radius: 50%;
+                background-color: #fff;
+                cursor: pointer;
+                top: -8px !important;
+                border: none !important;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20), 0px 2px 12px rgba(0, 0, 0, 0.10);
+
+            }
+
+            .noUi-target {
+                border: none !important;
+                box-shadow: none !important;
+            }
+
+            .noUi-horizontal {
+                height: 2px !important;
+            }
+
+            .input-range__container-number {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+
+            .noUi-target {
+                width: 100%;
+                left: 3px;
+            }
+
+            .input-range__dash {
+                display: flex;
+                align-items: center;
+            }
+
+            .input-range__number {
+                border-radius: 10px !important;
+                background: #fff;
+                border: 1px solid #3d3d3d !important;
+                color: #3d3d3d !important;
+                font-size: 16px;
+                font-style: normal;
+                letter-spacing: 0.32px;
+                padding: 5px 10px !important;
+                width: 100%;
+            }
+
+        }
+
+        .range__values {
+            display: flex;
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid rgba(7, 9, 51, 0.10);
+            background: #FFF;
+            box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10) inset;
+            height: 30px;
+            overflow: hidden;
+            padding: 3px 8px 0;
+
+            input {
+                width: 50%;
+                color: #643094;
+                font-size: 14px;
+
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+
+        .filter-buttons {
+            text-align: center;
+            margin-top: 60px;
+
+            .button {
+                margin: 0 auto 16px;
+                height: 40px;
+            }
+
+            .filter-reset {
+                color: #643094;
+
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+
+        &.mma-sub-aside {
+            @media (min-width: 992px) {
+                padding-top: 32px;
+            }
+        }
+    }
+
+    .banner-clickable {
+        margin-bottom: 42px;
+    }
+}
+
+
+.banner-clickable {
+    display: block;
+
+    picture {
+        display: block;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    @media (max-width: 991px) {
+        text-align: center;
+    }
+
+}
+
+
+.mma-video-widget {
+    border-radius: 8px;
+    background: #0B051D;
+    padding: 16px;
+    margin-bottom: 16px;
+
+    &__heading {
+        color: #FFF;
+        font-size: 24px;
+        line-height: 1.6;
+        margin-bottom: 8px;
+
+        @media (max-width: 991px) {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 9px;
+
+        a {
+            font-family: CeraPro;
+            font-weight: 700;
+            color: #FFF;
+            font-size: 18px;
+            line-height: 1.6;
+
+            @media (max-width: 991px) {
+                line-height: 1.33;
+            }
+        }
+    }
+
+    &__bottom {
+
+        .channel {
+            color: #FFF;
+            font-size: 14px;
+            gap: 6px;
+        }
+
+        .ml-auto {
+            color: rgba(255, 255, 255, 0.50);
+            font-size: 14px;
+        }
+    }
+
+    .video-cover {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 11px;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-in-out;
+            background: rgba(0, 0, 0, 0.50);
+            opacity: 0.7;
+        }
+
+        img {
+            position: relative;
+        }
+
+        .video-icon {
+            position: absolute;
+            z-index: 3;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+        }
+
+    }
+
+    a:hover {
+        .video-cover::after {
+            opacity: 1;
+        }
+    }
+
+    &.mobile-video-widget {
+        margin-bottom: 16px;
+
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+
+    &.desktop-video-widget {
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+
+}
+
+// .video-wrapper {
+//     position: relative;
+//     padding-bottom: 56.25%;
+//     height: 0;
+//     overflow: hidden;
+//     max-width: 656px;
+
+//     iframe {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         border-width: 0;
+//         outline-width: 0;
+//     }
+// }
+
+
+.media-wrapper {
+    flex-wrap: wrap;
+}
+
+.media-item {
+    width: calc(50% - 12px);
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 26px;
+    box-shadow: 0px 1px 16px rgba(0, 0, 0, 0.10);
+
+
+    .post-card-text {
+        padding: 21px 24px;
+
+        strong {
+            font-family: CeraPro;
+            color: $mainColor;
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+
+    h4 {
+        color: rgba(0, 0, 0, 0.80);
+        font-family: CeraPro;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.33;
+        margin-bottom: 5px;
+    }
+
+    .post-card:hover {
+        h4 {
+            color: $mainColor;
+        }
+    }
+
+    .post-date {
+        color: rgba(0, 0, 0, 0.40);
+        font-size: 14px;
+    }
+
+    .post-views-count {
+        color: rgba(0, 0, 0, 0.40);
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+}
+
+
+.text-content {
+
+    
+    &.sub-mma-content {
+        padding: 0 0 76px;
+    }
+
+
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/******* hardcore *******/
+
+.top-casinos {
+    padding: 16px 16px 8px;
+    background: #0b051d;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.top-casinos__header {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px
+}
+
+.top-casinos__title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff
+}
+
+.top-casinos__all {
+    font-size: 14px;
+    line-height: 114%;
+    font-weight: 600;
+    color: #fff
+}
+
+.top-casinos__item {
+    padding: 8px 0 6px;
+    display: flex;
+    align-items: center;
+    color: #fff
+}
+
+.top-casinos__item:hover .top-casinos__item-name {
+    color: rgba(255, 255, 255, .8)
+}
+
+.top-casinos__item-logo {
+    margin-right: 8px;
+    width: 32px;
+    aspect-ratio: 1/1;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    border-radius: 3px;
+    overflow: hidden
+}
+
+.top-casinos__item-info {
+    margin-right: auto
+}
+
+.top-casinos__item-name {
+    font-size: 14px;
+    line-height: 129%;
+    font-weight: 500;
+    transition: all .3s ease-in-out 0s;
+}
+
+.top-casinos__item-bonus {
+    font-size: 12px;
+    line-height: 133%;
+    color: #ffe22c;
+}
+
+.top-casinos__item-price {
+    padding: 6px 9px 6px 6px;
+    margin-left: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, .1);
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.top-casinos__item-price-icon {
+    width: 16px;
+    height: 16px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+}
+
+.top-casinos__item-price-value {
+    font-family: CeraPro;
+    font-size: 13px;
+    line-height: 108%;
+    font-weight: 700;
+    letter-spacing: -.6px;
+}
+
+.anchors-article {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: linear-gradient(0deg, #FBFBFB 0%, #FBFBFB 100%), #FFF;
+    padding: 24px 23px 0 0;
+    margin-bottom: 30px;
+
+    h4 {
+        font-size: 22px;
+        margin-left: 24px;
+    }
+
+    ul {
+        li {
+            position: relative;
+            padding-left: 45px;
+            padding: 16px 16px 16px 45px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                width: 6px;
+                height: 6px;
+                background-color: #643094;
+                position: absolute;
+                border-radius: 50%;
+                left: 24px;
+                top: calc(50% - 3px);
+            }
+
+            a {
+                color: rgba(0, 0, 0, 0.80);
+
+                &:hover {
+                    color: #643094;
+                }
+            }
+        }
+    }
+}
+
+.article-content {
+
+
+    &.narrow {
+        width: calc(100% - 356px);
+    }
+
+    h3 {
+        font-size: 32px;
+        font-weight: 900;
+        margin-bottom: 1rem;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    table {
+        margin: 8px 0 24px 0;
+        width: 100%;
+    }
+
+    .notice {
+        border-radius: 8px;
+        border: 1px solid #643094;
+        background: linear-gradient(0deg, rgba(100, 48, 148, 0.05) 0%, rgba(100, 48, 148, 0.05) 100%), #FFF;
+        padding: 24px 54px 24px 24px;
+        margin-bottom: 24px;
+
+        .notice-item {
+            display: flex;
+            gap: 8px;
+            padding-top: 16px;
+            line-height: 1.37;
+
+            &:not(:last-child) {
+                padding-bottom: 16px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+            }
+
+            .number {
+                border-radius: 50%;
+                background-color: #643094;
+                color: #fff;
+                font-weight: 700;
+                font-size: 14px;
+                flex-shrink: 0;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+    blockquote {
+        background: linear-gradient(0deg, rgba(100, 48, 148, 0.05) 0%, rgba(100, 48, 148, 0.05) 100%), #FFF;
+        position: relative;
+        padding: 24px 80px 24px 64px;
+        margin-bottom: 27px;
+        margin-top: 24px;
+
+        &::before {
+            content: '';
+            background: url(../images/mma/qoute.svg) no-repeat 0 0;
+            display: block;
+            width: 70px;
+            height: 52px;
+            position: absolute;
+            left: 0;
+            top: 24px;
+
+        }
+
+    }
+
+    hr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    }
+
+}
+
+.mma-slider {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 17px;
+    margin-top: 24px;
+
+    .mma-slider-image {
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 17px;
+    }
+
+    .swiper-slide-caption {
+        width: calc(100% - 85px);
+        color: rgba(0, 0, 0, 0.50);
+        font-size: 14px;
+        line-height: 1.28;
+    }
+
+    .slider__arrow {
+        position: absolute;
+        top: calc(50% - 70px);
+        z-index: 2;
+
+        &:not(.swiper-button-disabled) {
+            cursor: pointer;
+        }
+
+        &.swiper-prev {
+            left: 0;
+        }
+
+        &.swiper-next {
+            right: 0;
+        }
+
+
+    }
+
+    .swiper-pagination {
+        width: 85px;
+        left: auto;
+        right: 0;
+        background-color: #fff;
+        font-weight: 700;
+    }
+
+    .swiper-pagination-total {
+        color: rgba(0, 0, 0, 0.40);
+    }
+
+    .swiper-pagination-current {
+        color: #643094;
+    }
+
+}
+
+/***********/
+
+.fighter-profile {
+    display: flex;
+
+    &-left {
+        width: 46%;
+        padding-right: 24px;
+        position: relative;
+
+        &::after {
+            content: "";
+            height: calc(100% - 15px);
+            width: 1px;
+            display: block;
+            background: rgba(0, 0, 0, .1);
+            position: absolute;
+            right: 0;
+            top: 12px;
+        }
+    }
+
+    .fighter-photo {
+        margin-bottom: 13px;
+
+        .fighter-stat {
+            left: 93px;
+            right: auto;
+        }
+
+        &::after {
+            content: none;
+        }
+    }
+
+    &-info {
+        padding-left: 24px;
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.80);
+
+        >div {
+            margin-bottom: 7px;
+
+            span {
+                color: rgba(0, 0, 0, 0.50);
+            }
+
+            &.contract a {
+                color: #0070C9;
+            }
+        }
+
+        .insta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+}
+
+.videos {
+    margin-bottom: 16px;
+}
+
+.video-item {
+    width: calc(50% - 12px);
+    overflow: hidden;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+    .video-cover {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 16px;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        img {
+            position: relative;
+        }
+
+        .video-icon {
+            position: absolute;
+            z-index: 3;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+    }
+
+    &:hover {
+        .video-icon {
+            opacity: 1;
+        }
+
+        .video-cover::after {
+            background: rgba(0, 0, 0, 0.50);
+        }
+    }
+
+    h4 {
+        font-family: Ubuntu;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 16px;
+    }
+
+    .video-channel {
+        color: rgba(0, 0, 0, 0.50);
+        gap: 6px;
+        margin-bottom: 14px;
+    }
+
+}
+
+.profile-date {
+    color: rgba(0, 0, 0, 0.40);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.fighters-search-mobile {
+    position: relative;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 0;
+
+    @media (max-width: 991px) {
+        margin-bottom: 18px;
+    }
+
+    input {
+        padding: 10px 40px 10px 16px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        font-family: CeraPro;
+        font-size: 16px;
+        font-weight: 500;
+        z-index: 1;
+        border: 1px solid rgba(7, 9, 51, 0.10);
+        background-color: #FFF;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10) inset;
+        border-radius: 4px;
+        box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10) inset;
+
+        @media (max-width: 991px) {
+            height: 100%;
+            padding: 12px 40px 12px 16px;
+        }
+
+    }
+
+    .fighters-search-icon {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        width: 16px;
+        height: 16px;
+        z-index: 2;
+        transition: all .3s ease-in-out 0s;
+
+        @media (max-width: 991px) {
+            top: 16px;
+        }
+    }
+}
+
+.mma-sublist .text-content {
+    padding-top: 0;
+}
+
+
+/************/
+
+@media (min-width: 992px) {
+
+
+    .filter-trigger {
+        display: none;
+    }
+
+    .fighters-filter__mobile-header {
+        display: none;
+    }
+
+    .mobile-only {
+        display: none;
+    }
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+    .tabs .tabs__haschild:hover .subtabs {
+        display: block;
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .fighters-side .fighters-filter {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mma-page-title {
+        background-position: right;
+        padding-top: 53px;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+    }
+
+    .fighters-row {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+
+        .fighters-side {
+            width: 100%;
+        }
+
+        .fighters-body {
+            width: 100%;
+            padding-top: 16px;
+            padding-bottom: 32px;
+
+            &.mma-sublist {
+                padding-bottom: 0;
+
+
+            }
+        }
+
+    }
+
+    .fighters-item {
+        flex-wrap: wrap;
+
+        .fighter-photo {
+            margin: 0 auto 16px;
+
+            &::after {
+                content: none;
+            }
+        }
+
+        .fighter-info {
+            width: 100%;
+            text-align: center;
+
+            .name {
+                font-size: 18px;
+                margin-bottom: 12px;
+            }
+        }
+
+
+
+
+    }
+
+
+    .fighters-body.mma-sublist .fighters-search-mobile {
+        display: none;
+    }
+
+    .fighters-side {
+
+        .filter-title {
+            margin-bottom: 35px;
+        }
+
+        .filter-trigger {
+            position: fixed;
+            bottom: 24px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+
+            .button {
+                padding: 0 10px 0 16px;
+                width: 167px;
+                justify-content: space-between;
+                display: inline-flex;
+                box-shadow: 0px 9px 14px 0px rgba(100, 48, 148, 0.20);
+
+                .icon {
+                    border-radius: 10px;
+                    width: 28px;
+                    height: 28px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #fff;
+
+                    svg {
+                        margin: 0;
+                    }
+
+                }
+            }
+        }
+
+        .fighters-filter {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 38px 24px 80px;
+            overflow-y: auto;
+            display: none;
+            z-index: 101;
+            background: #fff;
+
+            &.visible {
+                display: block;
+            }
+
+        }
+
+        .filter-buttons {
+            margin-top: 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #fff;
+            display: flex;
+            left: 0;
+            box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.30);
+            z-index: 102;
+            justify-content: center;
+            padding: 8px;
+            gap: 8px;
+
+
+            .button {
+                margin: 0;
+                height: 48px;
+                width: 50%;
+            }
+
+            .filter-reset {
+                font-family: CeraPro;
+                font-weight: 500;
+                border-radius: 6px;
+                border: 1px solid rgba(20, 27, 145, 0.10);
+                padding: 14px 24px;
+                width: 50%;
+                font-size: 16px;
+
+                span {
+                    display: none;
+                }
+            }
+
+        }
+
+    }
+
+    .fighters-filter__mobile-header {
+        padding-top: 12px;
+        position: absolute;
+        left: 12px;
+        right: 16px;
+        top: 0;
+
+        .fighters-filter-clear {
+            border-radius: 6px;
+            border: 1px solid rgba(20, 27, 145, 0.10);
+            color: #643094;
+            padding: 6px 8px;
+            cursor: pointer;
+            font-family: CeraPro;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1;
+            transition: all 0.3s;
+
+            &:hover {
+                box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.10) inset;
+            }
+        }
+    }
+
+
+
+    .top-casinos {
+        margin-top: 0;
+    }
+
+    .article-content.narrow,
+    .article-content {
+        width: 100%;
+
+        blockquote {
+            padding: 24px;
+        }
+    }
+
+    .fighters .banner-clickable {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+
+    .mma-page-title {
+        padding-bottom: 1px;
+
+        p {
+            display: none;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 43px;
+        }
+    }
+
+
+    .tabs {
+        overflow-x: scroll;
+        gap: 16px;
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        padding-left: 16px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        padding-right: 16px;
+
+        li {
+            padding: 0;
+
+            &:first-child {
+                padding: 0 16px 0 0;
+
+                &:after {
+                    right: 0;
+                }
+            }
+        }
+
+        .tabs__item {
+            font-weight: 500;
+            position: relative;
+
+            &.active {
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 3px;
+                    background: #A91525;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                }
+            }
+        }
+
+        .tabs__haschild {
+            >a {
+                display: none;
+            }
+
+            .subtabs {
+                position: relative;
+                border-radius: 0;
+                background: transparent;
+                box-shadow: none;
+                padding: 0;
+                top: 0;
+                left: 0;
+                width: auto;
+                display: flex;
+                gap: 16px;
+
+                .tabs__item {
+                    color: #fff;
+                }
+
+            }
+
+        }
+
+    }
+
+    .tabs .tabs__haschild::after {
+        content: none;
+    }
+
+    .banner-clickable {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .media-item {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .fighters-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+        padding: 10px 0 12px;
+
+        &:nth-child(even) {
+            background: transparent;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .fighter-photo {
+            padding-left: 27px;
+            margin: 0 auto 8px;
+        }
+
+        .name {
+            line-height: 1.1;
+        }
+
+        .fighter-info {
+            padding: 10px 0 0;
+
+            .insta {
+                margin-bottom: 11px;
+            }
+        }
+    }
+
+    .fighters .banner-clickable {
+        margin-bottom: 24px;
+    }
+
+    .fighters-body {
+        padding-bottom: 0;
+
+        .fighters-list {
+            margin-bottom: 16px;
+        }
+
+
+    }
+
+
+    .media-item .post-card img {
+        width: 100%;
+    }
+
+    .mma-slider {
+        margin-left: -16px;
+        margin-right: -16px;
+
+        .swiper-slide-caption {
+            width: calc(100% - 45px);
+            padding-left: 16px;
+        }
+
+        .swiper-pagination {
+            width: 45px;
+        }
+
+        .mma-slider-image {
+            border-radius: 0;
+        }
+    }
+
+    .article-content .notice {
+        padding: 16px 24px;
+    }
+
+    .anchors-article {
+        padding: 16px 16px 0 0;
+
+        ul li {
+            padding: 16px 16px 16px 32px;
+
+            &::before {
+                left: 16px;
+            }
+        }
+
+        h4 {
+            margin-left: 16px;
+        }
+    }
+
+    .article-content blockquote {
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+
+
+    .fighters-body.mma-sublist .load-more {
+        margin-bottom: 23px;
+    }
+
+
+    .fighter-profile {
+        flex-wrap: wrap;
+
+        &-left {
+            width: 100%;
+            padding-right: 0;
+            padding-bottom: 16px;
+
+            &::after {
+                height: 1px;
+                width: 100%;
+                right: 0;
+                top: 100%;
+            }
+        }
+
+        &-info {
+            padding-left: 0;
+            padding-top: 16px;
+        }
+
+    }
+
+
+    .fighter-statistic__info-item:nth-child(5),
+    .fighter-statistic__info-item:nth-child(4),
+    .fighter-statistic__info-item:nth-child(3),
+    .fighter-statistic__info-item:nth-child(2),
+    .fighter-statistic__info-item:first-child {
+        max-width: 100%;
+    }
+
+    .fighter-statistic__numbers .d-flex {
+        flex-wrap: wrap;
+
+        .fighter-statistic__col {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 16px;
+
+            &:first-child {
+                border-bottom: 1px solid rgba(255, 255, 255, .08);
+            }
+        }
+    }
+
+
+    .video-item {
+        width: 100%;
+        margin-bottom: 12px;
+        border-bottom: none;
+
+        .video-item h4 {
+            font-size: 16px;
+        }
+
+    }
+
+
+    .profile-date {
+        display: none;
+    }
+
+    .fighter-profile .fighter-photo {
+        padding-left: 9px;
+        padding-right: 0;
+        margin-bottom: 24px;
+    }
+
+    .fighter-profile-info>div {
+        margin-bottom: 5px;
+    }
+
+    .videos {
+        margin-bottom: 0;
+    }
+
+    .video-item h4 {
+        font-size: 16px;
+    }
+
+    .fighters .fighter-stat .stat-label::after {
+        top: 11px;
+    }
+}

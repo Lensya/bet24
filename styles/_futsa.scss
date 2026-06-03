@@ -1,0 +1,1442 @@
+.futsal-page-title {
+    padding-top: 72px;
+    padding-bottom: 8px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+        color: #fff;
+        font-weight: 900;
+        font-size: 56px;
+        line-height: 1.1;
+        margin-bottom: 32px;
+        letter-spacing: -0.3px;
+    }
+
+    p {
+        color: #fff;
+        margin-bottom: 60px;
+        max-width: 68%;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 991px) {
+        background-position: right;
+        padding-top: 53px;
+
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 767px) {
+
+
+        padding-bottom: 1px;
+
+        p {
+            display: none;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 43px;
+        }
+
+
+    }
+
+}
+
+.tabs {
+
+    >li {
+        padding: 0 12px;
+
+        &:first-child {
+            padding: 0 36px 0 0;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 12px;
+                display: block;
+                height: 21px;
+                width: 0.5px;
+                background: rgba(255, 255, 255, 0.60);
+            }
+        }
+    }
+
+    &__item {
+        color: #fff;
+        font-family: CeraPro;
+        font-weight: 700;
+        display: block;
+        white-space: nowrap;
+        padding-bottom: 8px;
+
+    }
+
+    .subtabs {
+        position: absolute;
+        border-radius: 6px;
+        background: #FFF;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.10), 0px 8px 16px 0px rgba(26, 30, 105, 0.10);
+        padding: 10px 16px;
+        top: 100%;
+        left: 10px;
+        width: 165px;
+        display: none;
+        z-index: 2;
+
+        .tabs__item {
+            color: #000;
+        }
+    }
+
+    .tabs__haschild {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: -7px;
+            top: 6px;
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid rgba(255, 255, 255, .3);
+            border-left: 2px solid rgba(255, 255, 255, .3);
+            transform: rotate(-135deg);
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    .tabs .tabs__haschild:hover .subtabs {
+        display: block;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .tabs {
+        overflow-x: scroll;
+        gap: 16px;
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        padding-left: 16px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        padding-right: 16px;
+        margin-bottom: -1px;
+
+        li {
+            padding: 0;
+
+            &:first-child {
+                padding: 0 16px 0 0;
+
+                &:after {
+                    right: 0;
+                }
+            }
+        }
+
+        .tabs__item {
+            font-weight: 500;
+            position: relative;
+
+            &.active {
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 3px;
+                    background: #01CBE5;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                }
+            }
+        }
+
+        .tabs__haschild {
+            >a {
+                display: none;
+            }
+
+            .subtabs {
+                position: relative;
+                border-radius: 0;
+                background: transparent;
+                box-shadow: none;
+                padding: 0;
+                top: 0;
+                left: 0;
+                width: auto;
+                display: flex;
+                gap: 16px;
+
+                .tabs__item {
+                    color: #fff;
+                }
+
+            }
+
+        }
+
+    }
+
+    .tabs .tabs__haschild::after {
+        content: none;
+    }
+
+}
+
+/******/
+
+
+
+
+
+/*******/
+
+.futsal-row {
+    justify-content: space-between;
+
+    .futsal-body {
+        width: calc(100% - 354px);
+        padding-top: 27px;
+
+        @media (max-width: 767px) {
+            padding-top: 20px;
+        }
+
+        .media {
+            margin-bottom: 32px;
+
+            h2 {
+                margin-bottom: 20px;
+
+                @media (max-width: 767px) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+
+    }
+
+    .futsal-side {
+        width: 330px;
+    }
+
+    @media (max-width: 991px) {
+
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+
+        .futsal-side,
+        .futsal-body {
+            width: 100%;
+        }
+    }
+
+}
+
+
+.media-wrapper {
+    flex-wrap: wrap;
+}
+
+.media-item {
+    width: calc(50% - 12px);
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 26px;
+    box-shadow: 0px 1px 16px rgba(0, 0, 0, 0.10);
+
+    @media (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .post-card-text {
+        padding: 21px 24px;
+
+        strong {
+            font-family: CeraPro;
+            color: $mainColor;
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+
+    h4 {
+        color: rgba(0, 0, 0, 0.80);
+        font-family: CeraPro;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.33;
+        margin-bottom: 5px;
+    }
+
+    .post-card:hover {
+        h4 {
+            color: $mainColor;
+        }
+    }
+
+    .post-date {
+        color: rgba(0, 0, 0, 0.40);
+        font-size: 14px;
+    }
+
+    .post-views-count {
+        color: rgba(0, 0, 0, 0.40);
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .media-item .post-card img {
+        width: 100%;
+    }
+
+    .media-item .post-card-text {
+        padding: 14px 16px;
+    }
+
+}
+
+/****/
+
+.match-schedule {
+    padding: 28px 0 43px;
+
+    @media (max-width: 767px) {
+        padding: 24px 0 32px;
+
+    }
+
+    .match-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    h2 {
+        margin-bottom: 15px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+
+.match-item {
+    padding-bottom: 27px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 24px;
+
+}
+
+.match-item-title {
+    font-family: CeraPro;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @media (max-width: 767px) {
+        margin-bottom: 14px;
+    }
+}
+
+.match-wrapper {
+    margin-bottom: 11px;
+    overflow: hidden;
+}
+
+.match-row {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 9px 25px 9px 16px;
+    margin-bottom: 7px;
+
+    &:hover {
+        background: rgba(90, 31, 144, 0.10);
+    }
+
+    &:nth-child(odd) {
+        background: #F9F9F9;
+
+        &:hover {
+            background: rgba(90, 31, 144, 0.10);
+        }
+    }
+
+    @media (max-width: 767px) {
+        flex-wrap: wrap;
+        padding: 10px 16px;
+    }
+
+    .bet-button {
+        border-radius: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        background: #FFF;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px;
+        margin-left: 32px;
+        width: 192px;
+        flex-shrink: 0;
+        font-family: CeraPro;
+        font-weight:500;
+
+        @media (max-width: 1200px) {
+            margin-left: 16px;
+        }
+
+        @media (max-width: 767px) {
+            margin-left: 0;
+            width: 100%;
+            justify-content: center;
+            color: #4F1A80;
+            padding: 11px;
+
+            img {
+                max-width: 24px;
+            }
+        }
+    }
+
+    .match-row-info {
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        font-size: 18px;
+
+        @media (max-width: 1200px) {
+            font-size: 16px;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 10px;
+            position: relative;
+            flex-wrap: wrap;
+        }
+    }
+
+    .team {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+
+        span {
+            width: 96px;
+            text-align: center;
+
+            @media (max-width: 1200px) {
+                width: 85px;
+            }
+
+            @media (max-width: 767px) {
+                text-align: left;
+            }
+        }
+
+        &-logo {
+            width: 40px;
+            text-align: center;
+            margin-right: 16px;
+
+            @media (max-width: 1200px) {
+                margin-right: 8px;
+            }
+
+            @media (max-width: 767px) {
+                width: 20px;
+            }
+
+        }
+
+        &.team-second {
+            .team-logo {
+                margin: 0 0 0 16px;
+
+                @media (max-width: 1200px) {
+                    margin: 0 0 0 8px;
+                }
+
+                @media (max-width: 767px) {
+                    margin: 0 8px 0 0;
+                }
+            }
+
+            @media (max-width: 767px) {
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                margin-top: 4px;
+            }
+        }
+    }
+
+    .match-time {
+        font-family: CeraPro;
+        font-weight: 700;
+
+        @media (max-width: 767px) {
+            position: absolute;
+            right: 0;
+        }
+    }
+
+
+}
+
+.match-results {
+    padding: 32px 0 48px;
+
+    @media (max-width:768px) {
+        padding: 32px 0;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 12px;
+        }
+    }
+
+    .match-item {
+        padding-bottom: 24px;
+    }
+
+    .match-result {
+        font-family: CeraPro;
+        font-weight: 700;
+        display: flex;
+        justify-content: flex-start;
+
+        @media (max-width: 767px) {
+            position: absolute;
+            right: 0;
+            flex-direction: column;
+            gap: 8px;
+
+            &-divider {
+                display: none;
+            }
+        }
+    }
+
+    .match-row {
+        padding: 11px 45px 11px 25px;
+        margin-bottom: 7px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media (max-width: 767px) {
+            padding: 11px 16px ;
+        }
+
+
+        .team {
+            width: 32%;
+            justify-content: space-between;
+
+            @media (max-width: 767px) {
+                width: 100%;
+                justify-content: flex-start;
+
+                &.team-second {
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;
+                    margin-top: 8px;
+                }
+            }
+        }
+        @media (max-width: 767px) {
+        .match-row-info {
+            margin-bottom: 0;
+        }
+    }
+    }
+
+    @media (max-width: 767px) {
+        .match-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .match-wrapper {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.bombers {
+    padding: 0 0 50px 0;
+
+    @media (max-width: 767px) {
+        padding: 0 0 9px 0;
+    }
+
+    h2 {
+        margin-bottom: 24px;
+    }
+}
+
+.bombers-wrapper {
+    margin-bottom: 32px;
+
+    @media (max-width: 767px) {
+        margin: 0 -16px 16px;
+    }
+
+    .bombers-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 24px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+
+        @media (max-width: 767px) {
+            border-radius: 0;
+        }
+
+        &:nth-child(odd) {
+            background-color: #F9F9F9;
+        }
+
+        &.bomber-yellow {
+            border-radius: 0px 8px 8px 0px;
+            background-color: rgba(242, 204, 69, 0.10);
+            border-left: 5px solid #F2CC45;
+            padding-left: 19px;
+
+            @media (max-width: 767px) {
+                border-radius: 0;
+            }
+        }
+
+        .bombers-score {
+            color: rgba(0, 0, 0, 0.80);
+            font-family: Ubuntu;
+            font-weight: 700;
+            width: 45px;
+            padding-left: 25px;
+            text-align: center;
+
+
+        }
+
+        &.bomber-top {
+            .bombers-score {
+                background: url(../images/futsal/light.svg) no-repeat 0 center;
+            }
+        }
+
+        .bombers-name {
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+/**************/
+
+.standings {
+    border-radius: 6px;
+    border: 1px solid rgba(20, 27, 145, 0.10);
+    padding: 25px 0 16px;
+    margin-top: 88px;
+
+    h3 {
+        font-size: 22px;
+        font-weight: 900;
+        margin-bottom: 20px;
+        margin-left: 18px;
+    }
+
+    .standings-table {
+        padding-right: 16px;
+        margin-bottom: 16px;
+        overflow: hidden;
+
+        .standings-row {
+            padding-left: 16px;
+
+
+            &:nth-child(even) {
+                .standings-inner {
+                    background: #F9F9F9;
+                }
+            }
+
+            &.standings-row-green {
+                padding-left: 11px;
+                border-radius: 0px 8px 8px 0px;
+                background: #EFFDE4;
+                border-left: 5px solid rgba(142, 190, 74, 0.80);
+
+                .standings-inner {
+                    background: #EFFDE4;
+                }
+            }
+
+        }
+
+        .standings-row-green+.standings-row-green {
+            margin-top: 8px;
+        }
+
+        .standings-inner {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 16px 10px 10px;
+            border-radius: 8px;
+
+
+            .club {
+                width: 105px;
+
+                strong {
+                    font-family: CeraPro;
+                    font-weight: 700;
+                    margin-right: 8px;
+                }
+            }
+
+            .num {
+                display: flex;
+                gap: 13px;
+
+                span {
+                    font-family: CeraPro;
+                    font-weight: 500;
+                }
+            }
+
+
+            .points {
+                font-family: CeraPro;
+                font-weight: 700;
+            }
+
+        }
+
+
+    }
+
+    .see-all-btn {
+        margin-left: 16px;
+        width: calc(100% - 32px);
+        min-width: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .standings.for-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .standings.for-desktop {
+        display: none;
+    }
+
+    .standings {
+        margin-bottom: 32px;
+        margin-top: 32px;
+    }
+}
+
+.full-standings {
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .date-update {
+        color: rgba(0, 0, 0, 0.40);
+        font-size: 14px;
+    }
+
+    .standings-table {
+        overflow: hidden;
+        margin-bottom: 32px;
+        margin-top: 8px;
+
+        .standings-row {
+            margin-top: 7px;
+
+            &:nth-child(odd) {
+                .standings-inner {
+                    background: #F9F9F9;
+                }
+            }
+
+            &.standings-row-green {
+                border-radius: 0px 8px 8px 0px;
+                background: #EFFDE4;
+                border-left: 5px solid rgba(142, 190, 74, 0.80);
+
+                .standings-inner {
+                    background: #EFFDE4;
+                    padding-left: 13px;
+                }
+            }
+
+        }
+
+        .standings-inner {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 37px 10px 18px;
+            border-radius: 8px;
+
+
+            .club {
+                width: 41%;
+                padding-right: 16px;
+
+                strong {
+                    font-family: CeraPro;
+                    font-weight: 700;
+                    margin-right: 24px;
+                }
+            }
+
+            .num {
+                display: flex;
+                gap: 18px;
+                width: 22%;
+
+                span {
+                    width: 20px;
+                    text-align: center;
+                }
+            }
+
+            .balls {
+                width: 30%;
+                text-align: center;
+            }
+
+            .points {
+                font-family: CeraPro;
+                font-weight: 700;
+                width: 6.5%;
+                text-align: center;
+            }
+
+        }
+
+        .standings-head {
+            padding-bottom: 8px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 8px;
+                height: 1px;
+                left: 0;
+                width: 98%;
+                display: block;
+                background-color: rgba(0, 0, 0, 0.08);
+            }
+
+            .club {
+
+                .place {
+                    margin-right: 24px;
+                }
+            }
+
+            .points-head {
+                width: 6.5%;
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+
+
+
+        .standings-table {
+            font-size: 14px;
+            margin: 0 -16px 32px;
+
+            .standings-head {
+
+                .balls span,
+                .points-head span {
+                    display: none;
+                }
+
+                .club .place {
+                    margin-right: 8px;
+                }
+
+                .club span:last-child {
+                    font-size: 12px;
+                }
+            }
+
+
+            .standings-inner {
+                padding-right: 23px;
+                border-radius: 0;
+                padding-top: 9px;
+                padding-bottom: 9px;
+
+                .num {
+                    width: 30%;
+
+                    span {
+                        width: 17px;
+                    }
+                }
+
+                .club {
+                    width: 35%;
+                    padding-right: 8px;
+
+                    span span {
+                        display: none;
+                    }
+
+                    strong {
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
+}
+
+
+.banner-clickable {
+    display: block;
+
+    picture {
+        display: block;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    @media (max-width: 991px) {
+        text-align: center;
+    }
+
+}
+
+/*** top-casinos **/
+
+.top-casinos {
+    padding: 16px 16px 8px;
+    background: #0b051d;
+    border-radius: 6px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    @media (max-width: 991px) {
+        margin-bottom: 32px;
+    }
+
+}
+
+.top-casinos__header {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px
+}
+
+.top-casinos__title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff
+}
+
+.top-casinos__all {
+    font-size: 14px;
+    line-height: 114%;
+    font-weight: 600;
+    color: #fff
+}
+
+.top-casinos__item {
+    padding: 8px 0 6px;
+    display: flex;
+    align-items: center;
+    color: #fff
+}
+
+.top-casinos__item:hover .top-casinos__item-name {
+    color: rgba(255, 255, 255, .8)
+}
+
+.top-casinos__item-logo {
+    margin-right: 8px;
+    width: 32px;
+    aspect-ratio: 1/1;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    border-radius: 3px;
+    overflow: hidden
+}
+
+.top-casinos__item-info {
+    margin-right: auto
+}
+
+.top-casinos__item-name {
+    font-size: 14px;
+    line-height: 129%;
+    font-weight: 500;
+    transition: all .3s ease-in-out 0s;
+}
+
+.top-casinos__item-bonus {
+    font-size: 12px;
+    line-height: 133%;
+    color: #ffe22c;
+}
+
+.top-casinos__item-price {
+    padding: 6px 9px 6px 6px;
+    margin-left: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, .1);
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.top-casinos__item-price-icon {
+    width: 16px;
+    height: 16px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+}
+
+.top-casinos__item-price-value {
+    font-family: CeraPro;
+    font-size: 13px;
+    line-height: 108%;
+    font-weight: 700;
+    letter-spacing: -.6px;
+}
+
+
+
+/**********/
+
+
+.faqs:first-child {
+    margin-top: 0
+}
+
+.faqs:last-child {
+    margin-bottom: 0
+}
+
+.faqs__item:not(:last-child) {
+    margin-bottom: 20px
+}
+
+.faqs__item-question {
+    padding-left: 39px;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 900;
+    color: #643094;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+    position: relative;
+    cursor: pointer
+}
+
+.faqs__item-question:hover {
+    color: #000
+}
+
+.faqs__item-question.is-active {
+    color: #000
+}
+
+.faqs__item-question.is-active::before {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.faqs__item-question::after,
+.faqs__item-question::before {
+    content: "";
+    position: absolute;
+    background: #cacbde;
+    width: 2px;
+    height: 12px;
+    border-radius: 30px;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s
+}
+
+.faqs__item-question::before {
+    top: 6px;
+    left: 6px
+}
+
+.faqs__item-question::after {
+    top: 6px;
+    left: 6px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.faqs__item-answer {
+    height: 0;
+    will-change: height;
+    overflow: hidden;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s
+}
+
+.faqs__item-content {
+    padding-top: 24px;
+    padding-left: 40px;
+    padding-bottom: 12px;
+    max-width: 745px
+}
+
+.faqs__item-content p:has(+p) {
+    margin-bottom: 12px
+}
+
+.useful-link {
+    padding: 16px 22px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    border: 1px solid rgba(100, 48, 148, .2);
+    box-shadow: 0 0 23px rgba(0, 0, 0, .05);
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 138%;
+    font-weight: 700;
+    font-family: CeraPro;
+    color: rgba(0, 0, 0, .8);
+    transition: all .3s ease-in-out 0s;
+}
+
+.useful-link:first-child {
+    margin-top: 0
+}
+
+.useful-link:last-child {
+    margin-bottom: 0
+}
+
+.useful-link:hover {
+    color: #643094
+}
+
+.useful-link__icon {
+    width: 32px;
+    aspect-ratio: 1/1;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none
+}
+
+
+
+@media (min-width:767px) {
+    .faqs__item {
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, .06)
+    }
+}
+
+
+
+.futsal-row.sub-page {
+    margin-bottom: 56px;
+
+    @media (max-width: 767px) {
+        margin-bottom: 43px;
+
+        .match-schedule {
+            padding: 24px 0 0;
+        }
+
+        .match-wrapper {
+            margin-bottom: 0;
+        }
+
+    }
+
+    .load-more .button {
+        width: 100%;
+    }
+
+    .media {
+        margin-bottom: 0;
+    }
+
+    .match-results {
+        padding: 0;
+
+        .match-item:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+
+    .match-schedule {
+        padding: 0;
+    }
+
+    .margin-t-32 {
+        margin-top: 32px !important;
+    }
+
+    .bombers {
+        padding: 0;
+    }
+}
+
+
+.single-match-result {
+    .video-wrapper {
+        margin-bottom: 32px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 8px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 20px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+
+.match-result-row {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.10);
+    padding: 12px 12px 0;
+
+    .match-row-info {
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        padding: 14px 8px 26px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+        @media (max-width: 767px) {
+            padding: 8px 0;
+        }
+    }
+
+    .team {
+        display: flex;
+        align-items: center;
+        width: 32%;
+        gap: 24px;
+        font-family: CeraPro;
+        font-weight: 500;
+        font-size: 24px;
+
+        @media (max-width: 767px) {
+            font-size: 16px;
+            gap: 6px;
+        }
+
+
+        &-logo {
+            width: 40px;
+            text-align: center;
+
+            @media (max-width: 767px) {
+                width: 20px;
+            }
+
+        }
+
+        &.team-second {
+            justify-content: flex-end;
+
+           
+
+        }
+    }
+
+
+    .match-result {
+        font-family: CeraPro;
+        font-weight: 700;
+        font-size: 32px;
+
+        @media (max-width: 767px) {
+            font-size: 18px;
+        }
+    }
+
+}
+
+
+.gamer-number:before {
+    content: attr(data-gamer);
+    font-family: CeraPro;
+    position: absolute;
+    left: -12px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .8);
+    display: flex;
+    z-index: 2;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, .25);
+    justify-content: center;
+    align-items: center;
+}
+
+.match-gamers {
+    >div {
+        width: 50%;
+        padding: 18px 24px 9px;
+
+        @media (max-width: 767px) {
+            padding: 18px 8px 18px;
+            font-size: 14px;
+        }
+
+        .gamer {
+            position: relative;
+            font-family: CeraPro;
+            font-weight: 500;
+            letter-spacing: 0.48px;
+            margin-bottom: 6px;
+            background-image: url(../images/futsal/ball.png);
+            background-repeat: no-repeat;
+        }
+
+        &.gamers-left {
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+
+            .gamer {
+                padding-left: 26px;
+                background-position: 0 center;
+
+                @media (max-width: 767px) {
+                    padding-left: 24px;
+                }
+            }
+        }
+
+        &.gamers-right {
+            text-align: right;
+
+            .gamer {
+                padding-right: 26px;
+                background-position: right center;
+
+                @media (max-width: 767px) {
+                    padding-right: 24px;
+                }
+
+                &.gamer-number:before {
+                    left: auto;
+                    right: -12px;
+                }
+            }
+        }
+    }
+}
+
+
+.futsal-body.empty {
+    text-align: center;
+    padding-top: 78px;
+    padding-bottom: 20px;
+
+    p {
+        font-family: CeraPro;
+        color: #000;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        opacity: 0.1;
+    }
+    @media (max-width: 767px) {
+        padding-top: 63px;
+
+        p {
+            font-size: 22px;
+        }
+
+
+    }
+}

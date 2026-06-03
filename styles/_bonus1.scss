@@ -1,0 +1,1215 @@
+.bonus-page-title {
+    margin-bottom: 24px;
+    margin-top: 24px;
+
+    h1 {
+        font-size: 52px;
+        line-height: 1;
+        font-weight: 900;
+        margin-bottom: 24px;
+    }
+}
+
+.bonus-single .bonus-page-title h1 {
+    margin-bottom: 10px;
+}
+
+.main-bonus-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bonus-body {
+    width: calc(100% - 354px);
+    padding-bottom: 34px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    width: calc(100% + 22px);
+    margin-left: -11px;
+    padding: 0 11px;
+    margin-bottom: 24px;
+}
+
+.bonus-menu {
+    overflow: hidden;
+
+    &_item {
+        width: 132px;
+        min-width: 132px;
+        height: 128px;
+        border-radius: 6px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+        display: block;
+        font-weight: 700;
+        line-height: 1;
+        font-family: CeraPro;
+        padding: 12px;
+        flex-shrink: 0;
+    }
+
+
+}
+
+.swiper-btn-next,
+.swiper-btn-prev {
+    position: absolute;
+    top: 56px;
+    z-index: 3;
+    cursor: pointer;
+    box-shadow: 0px 1px 16px rgba(0, 0, 0, .1);
+    height: 28px;
+}
+
+.swiper-btn-next {
+    right: 0;
+}
+
+.swiper-btn-prev {
+    left: 0;
+}
+
+.swiper-btn-next.swiper-button-disabled,
+.swiper-btn-prev.swiper-button-disabled {
+    opacity: 0;
+}
+
+
+.bonus-side {
+    width: 330px;
+}
+
+.bonuses-flex {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+
+.bonus_item {
+    width: calc(50% - 12px);
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    padding-bottom: 136px;
+    position: relative;
+    margin-bottom: 24px;
+    box-shadow: 0px 10px 34px rgba(0, 0, 0, 0.15);
+
+    &__image {
+        display: block;
+    }
+
+    &__info {
+        padding: 16px 24px 12px;
+    }
+
+    .bonus-buttons {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        width: calc(100% - 48px);
+
+        .button {
+            width: 100%;
+
+            &:first-child {
+                margin-bottom: 16px;
+            }
+        }
+
+        .button--white {
+            justify-content: space-between;
+            padding: 16px 16px;
+        }
+    }
+
+    h4 {
+        color: rgba(0, 0, 0, 0.80);
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1.2;
+        margin-bottom: 8px;
+
+        &:hover a {
+            color: $mainColor;
+        }
+    }
+
+    p {
+        line-height: 1.37;
+    }
+
+    &.empty {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        padding: 0;
+        background: url(../images/logo.svg) no-repeat center #fff;
+        background-size: 117px auto;
+
+
+
+    }
+
+    .no-click {
+        pointer-events: none;
+        cursor: default;
+        opacity: 0.3;
+    }
+}
+
+.bonus_card-badge {
+    gap: 8px;
+    margin-bottom: 16px;
+
+    span {
+        display: block;
+        border-radius: 6px;
+        background: rgba(138, 140, 140, 0.20);
+        padding: 4px 16px;
+        font-weight: 500;
+    }
+
+    img {
+        flex-shrink: 0;
+    }
+
+}
+
+.load-more {
+    margin-bottom: 31px;
+
+    .button {
+        width: 100%;
+    }
+}
+
+.banner-clickable {
+    display: block;
+    margin-bottom: 24px;
+
+    img {
+        border-radius: 6px;
+    }
+}
+
+h2 {
+    margin-bottom: 24px;
+    font-size: 32px;
+    line-height: 1;
+}
+
+// .bonuses-default {
+//     margin-bottom: 8px;
+// }
+
+.promocode-btn {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(90, 31, 144, 0.20);
+    background: #FCFBFD;
+    position: relative;
+    cursor: pointer;
+    padding: 10px 16px;
+
+    span {
+        color: rgba(0, 0, 0, 0.30);
+        font-size: 10px;
+        line-height: 1.2;
+        display: block;
+    }
+
+    strong {
+        color: #5A1F90;
+        font-family: CeraPro;
+        font-size: 16px;
+        line-height: 1;
+        display: block;
+    }
+
+    // &:after {
+    //     content: attr(data-hover-text);
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     width: 100%;
+    //     height: 100%;
+    //     border-radius: 6px;
+    //     background: #5A1F90;
+    //     font-weight: 500;
+    //     color: #fff;
+    //     opacity: 1;
+    //     z-index: 2;
+    //     transition: all .3s
+    // }
+
+    &:hover {
+        background: #FCFBFD;
+    }
+
+    // &:hover:after {
+    //     opacity: 0;
+    //     z-index: -2;
+    // }
+
+
+}
+
+
+
+.bonuses-best {
+    margin-bottom: 18px;
+
+    .bonus_item {
+        background-color: #5A1F90;
+
+        p,
+        h4 a {
+            color: #fff;
+        }
+
+        .bonus_card-badge span {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.20);
+        }
+
+    }
+
+    .promocode-btn {
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        background: rgba(255, 255, 255, 0.30);
+
+        span {
+            color: rgb(255 255 255 / 70%);
+        }
+
+        strong {
+            color: #fff;
+        }
+
+        &:after {
+            border: 1px solid rgba(255, 255, 255, 1);
+        }
+
+    }
+
+}
+
+.copied-promo {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #8EBE4A;
+    padding: 18px 24px 18px 43px;
+    display: none;
+    gap: 9px;
+    align-items: center;
+    z-index: 101;
+
+    .copied-promo_note {
+        font-size: 18px;
+        color: #fff;
+    }
+
+    &.show {
+        display: flex;
+    }
+
+    .close-btn {
+        cursor: pointer;
+        opacity: 0.5;
+        margin-left: auto;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+
+.bonus-selections {
+    border-radius: 6px;
+    border: 1px solid rgba(20, 27, 145, 0.10);
+    background: #FFF;
+    padding: 16px 16px 8px;
+    overflow: hidden;
+
+    h3 {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+
+    h5 {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    ul {
+        margin-bottom: 16px;
+
+        li {
+            border-bottom: 1px solid rgba(20, 27, 145, 0.10);
+            padding: 8px 0;
+
+            a {
+                color: #5A1F90;
+                font-weight: 700;
+                font-family: CeraPro;
+                display: flex;
+                gap: 7px;
+                align-items: center;
+                line-height: 21px;
+
+                span {
+                    min-width: 20px;
+                }
+
+                img {
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        &.type-bonus {
+            margin-bottom: 0;
+
+            li:last-child {
+                border: none;
+            }
+        }
+    }
+
+}
+
+
+
+
+/*** top-casinos **/
+
+.top-casinos {
+    padding: 16px 16px 8px;
+    background: #0b051d;
+    border-radius: 6px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    @media (max-width: 991px) {
+        margin-bottom: 32px;
+    }
+
+}
+
+.top-casinos__header {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px
+}
+
+.top-casinos__title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff
+}
+
+.top-casinos__all {
+    font-size: 14px;
+    line-height: 114%;
+    font-weight: 600;
+    color: #fff
+}
+
+.top-casinos__item {
+    padding: 8px 0 6px;
+    display: flex;
+    align-items: center;
+    color: #fff
+}
+
+.top-casinos__item:hover .top-casinos__item-name {
+    color: rgba(255, 255, 255, .8)
+}
+
+.top-casinos__item-logo {
+    margin-right: 8px;
+    width: 32px;
+    aspect-ratio: 1/1;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    border-radius: 3px;
+    overflow: hidden
+}
+
+.top-casinos__item-info {
+    margin-right: auto
+}
+
+.top-casinos__item-name {
+    font-size: 14px;
+    line-height: 129%;
+    font-weight: 500;
+    transition: all .3s ease-in-out 0s;
+}
+
+.top-casinos__item-bonus {
+    font-size: 12px;
+    line-height: 133%;
+    color: #ffe22c;
+}
+
+.top-casinos__item-price {
+    padding: 6px 9px 6px 6px;
+    margin-left: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, .1);
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.top-casinos__item-price-icon {
+    width: 16px;
+    height: 16px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+}
+
+.top-casinos__item-price-value {
+    font-family: CeraPro;
+    font-size: 13px;
+    line-height: 108%;
+    font-weight: 700;
+    letter-spacing: -.6px;
+}
+
+
+/**** single bonus *****/
+
+.main-image {
+    position: relative;
+    margin-bottom: 16px;
+
+    .badge {
+        color: #000;
+        font-size: 10px;
+        font-weight: 600;
+        border-radius: 8px 0px 0px 0px;
+        background: #FFE22C;
+        padding: 8px 16px;
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 24px;
+    }
+
+}
+
+.bonus-descript {
+    margin-bottom: 16px;
+}
+
+.bonus-meta {
+    display: flex;
+    color: rgba(0, 0, 0, 0.40);
+    font-size: 14px;
+    align-items: center;
+    gap: 6px;
+
+    .views {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+}
+
+.promocode-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    .button {
+        width: calc(50% - 12px);
+    }
+
+    .promocode-btn {
+        border: none;
+        outline: 1px dashed #FFD600;
+        background: #FFE22C;
+
+        &::after {
+            content: none;
+        }
+    }
+}
+
+
+
+.bonus-info {
+    display: flex;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.10);
+    padding: 26px 35px;
+    margin-bottom: 24px;
+
+    &-item {
+        width: calc(100% / 3);
+        position: relative;
+        text-align: center;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.10);
+            position: absolute;
+            right: 0;
+            top: calc(50% - 25px);
+        }
+
+        &:last-child::after {
+            content: none;
+        }
+
+    }
+
+    &-icon {
+        margin-bottom: 8px;
+    }
+
+    span {
+        font-family: CeraPro;
+        font-weight: 500;
+        display: block;
+
+        &.price {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+}
+
+.mma-slider {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 17px;
+
+    .mma-slider-image {
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 17px;
+    }
+
+    .swiper-slide-caption {
+        width: calc(100% - 85px);
+        color: rgba(0, 0, 0, 0.50);
+        font-size: 14px;
+        line-height: 1.28;
+    }
+
+    .slider__arrow {
+        position: absolute;
+        top: calc(50% - 60px);
+        z-index: 2;
+
+        &:not(.swiper-button-disabled) {
+            cursor: pointer;
+        }
+
+        &.swiper-prev {
+            left: 0;
+        }
+
+        &.swiper-next {
+            right: 0;
+        }
+
+
+    }
+
+    .swiper-pagination {
+        width: 85px;
+        left: auto;
+        right: 0;
+        background-color: #fff;
+        font-weight: 700;
+    }
+
+    .swiper-pagination-total {
+        color: rgba(0, 0, 0, 0.40);
+    }
+
+    .swiper-pagination-current {
+        color: #643094;
+    }
+
+}
+
+
+
+.article-content {
+
+    h2 {
+        font-size: 32px;
+        font-weight: 900;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 24px;
+    }
+
+    table {
+        margin: 8px 0 24px 0;
+        border-collapse: collapse;
+        width: 100%;
+
+        td {
+            border: 1px solid rgba(0, 0, 0, 0.10);
+            padding: 10px 24px;
+        }
+
+        th {
+            border: 1px solid rgba(0, 0, 0, 0.10);
+            text-align: left;
+            padding: 10px 24px;
+        }
+    }
+
+    .notice {
+        border-radius: 8px;
+        border: 1px solid #643094;
+        background: linear-gradient(0deg, rgba(100, 48, 148, 0.05) 0%, rgba(100, 48, 148, 0.05) 100%), #FFF;
+        padding: 24px 54px 24px 24px;
+        margin-bottom: 24px;
+
+        h4 {
+            font-size: 22px;
+        }
+
+        .notice-item {
+            display: flex;
+            gap: 8px;
+            padding-top: 16px;
+            line-height: 1.37;
+
+            &:not(:last-child) {
+                padding-bottom: 16px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+            }
+
+            .number {
+                border-radius: 50%;
+                background-color: #643094;
+                color: #fff;
+                font-weight: 700;
+                font-size: 14px;
+                flex-shrink: 0;
+                width: 32px;
+                height: 32px;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+    blockquote {
+        background: linear-gradient(0deg, rgba(100, 48, 148, 0.05) 0%, rgba(100, 48, 148, 0.05) 100%), #FFF;
+        position: relative;
+        padding: 24px 80px 24px 64px;
+        margin-bottom: 16px;
+        margin-top: 24px;
+        border-radius: 8px;
+        font-size: 20px;
+        line-height: 1.6;
+
+        &::before {
+            content: '';
+            background: url(../images/mma/qoute.svg) no-repeat 0 0;
+            display: block;
+            width: 70px;
+            height: 52px;
+            position: absolute;
+            left: 0;
+            top: 24px;
+
+        }
+
+    }
+
+    hr {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+        margin-bottom: 24px;
+    }
+
+    .promocode-table {
+        border-radius: 7px;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.10);
+        margin-bottom: 24px;
+
+        .thead {
+            background: #643094;
+            color: #fff;
+            padding: 7px 15px;
+
+            span {
+                margin-right: 12px;
+            }
+        }
+
+        .td {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+            padding: 10px 15px;
+
+            span {
+                margin-right: 12px;
+            }
+
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+
+}
+
+.bonus-body .faqs {
+    margin-bottom: 24px;
+}
+
+
+.bonus-side-banner {
+    position: relative;
+    margin-bottom: 24px;
+
+    .inner {
+        position: absolute;
+        top: 70px;
+        left: 30px;
+        width: calc(100% - 60px);
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 30px;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+.another-bonuses-slider {
+    padding-top: 24px;
+    position: relative;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    padding: 24px 20px;
+    margin-bottom: 24px;
+
+    &::before {
+        content: '';
+        height: 100%;
+        width: 20px;
+        background: linear-gradient(90deg, #FFF 10%, rgba(245, 245, 245, 0.02) 89.86%);
+        display: block;
+        left: 0;
+        top: 0;
+        position: absolute;
+        z-index: 2;
+    }
+
+    &::after {
+        content: '';
+        height: 100%;
+        width: 207px;
+        background: linear-gradient(270deg, #FFF 24.38%, rgba(245, 245, 245, 0.02) 89.86%);
+        display: block;
+        right: 0;
+        top: 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .bonus_item {
+        margin-bottom: 30px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, .15);
+    }
+
+    .swiper-btn-prev {
+        top: 50%;
+        box-shadow: none;
+    }
+
+    .swiper-btn-next {
+        top: 50%;
+        box-shadow: none;
+    }
+}
+
+.no-promocode {
+    display: flex;
+    padding: 24px;
+    gap: 18px;
+
+    border-radius: 8px;
+    background: #FFE22C;
+    margin-bottom: 24px;
+
+    .button {
+        width: 100%;
+        height: 58px;
+        font-size: 18px;
+    }
+
+    &.inactive {
+        opacity: 0.3;
+
+        .button {
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+
+}
+
+
+
+
+
+
+/********/
+
+@media (min-width: 992px) {
+    .filter-trigger {
+        display: none;
+    }
+
+    .fighters-filter__mobile-header {
+        display: none;
+    }
+
+    .bonus-selections-less,
+    .bonus-selections-more {
+        display: none;
+    }
+
+}
+
+
+
+@media (max-width: 991px) {
+
+    .bonus-page-title h1 {
+        font-size: 40px;
+    }
+
+    .main-bonus-row {
+        flex-wrap: wrap;
+    }
+
+    .bonus-body {
+        width: 100%;
+    }
+
+    .bonus-side {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+
+    .swiper-btn-next,
+    .swiper-btn-prev {
+        display: none;
+    }
+
+    .top-casinos {
+        display: none;
+    }
+
+    .bonus-selections {
+        padding-bottom: 0;
+
+        ul.all-bonus-list {
+            margin-bottom: 0;
+
+            li:nth-child(n + 8) {
+                display: none;
+            }
+        }
+
+        ul:not(.all-bonus-list),
+        h5 {
+            display: none;
+        }
+
+        .bonus-selections-more,
+        .bonus-selections-less {
+            color: #643094;
+            font-family: CeraPro;
+            font-weight: 700;
+            margin: -1px -16px 0;
+            padding: 11px;
+            text-align: center;
+            background-color: #fff;
+            border-top: 1px solid rgba(20, 27, 145, .1);
+            cursor: pointer;
+        }
+
+        .bonus-selections-more:hover,
+        .bonus-selections-less:hover {
+            color: #000;
+        }
+
+        &:not(.open) {
+            .bonus-selections-less {
+                display: none;
+            }
+        }
+
+        &.open {
+            ul:first-child {
+                li:nth-child(n + 8) {
+                    display: block;
+                }
+            }
+
+            ul:not(first-child),
+            h5 {
+                display: block;
+            }
+
+            .bonus-selections-more {
+                display: none;
+            }
+
+            ul.all-bonus-list {
+                margin-bottom: 16px;
+            }
+
+            ul.type-bonus {
+                margin-bottom: 0;
+            }
+
+        }
+
+    }
+
+    .article-content blockquote {
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .bonus-page-title {
+        margin-top: 16px;
+        margin-bottom: 12px;
+    }
+
+    .copied-promo {
+        padding: 11px 9px 11px 16px;
+        gap: 8px;
+
+        .copied-promo_note {
+            font-size: 14px;
+        }
+
+        .close-btn svg {
+            height: 14px;
+            width: 14px;
+        }
+    }
+
+
+    .bonus-page-title h1 {
+        font-size: 32px;
+        margin-bottom: 12px;
+        line-height: 0.87;
+    }
+
+    .bonus-body {
+        padding-bottom: 0;
+    }
+
+    .bonus_item {
+        width: 100%;
+        margin-bottom: 16px;
+
+        &__image img {
+            width: 100%;
+        }
+
+        &__info {
+            padding: 12px 16px;
+        }
+
+        .bonus-buttons {
+            bottom: 16px;
+            left: 16px;
+            width: calc(100% - 32px);
+        }
+
+    }
+
+    .banner-clickable {
+        margin-bottom: 32px;
+        margin-top: 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+
+    .bonus-side .filter-title {
+        margin-bottom: 24px;
+
+        span {
+            font-size: 24px;
+        }
+    }
+
+    .bonus-side .filter-checkboxes-item {
+        margin-bottom: 17px;
+    }
+
+    .main-image {
+        margin: 0 -16px 16px;
+
+        .badge {
+            line-height: 1;
+            top: 16px;
+        }
+    }
+
+    .promocode-buttons {
+        flex-wrap: wrap;
+        gap: 12px;
+
+        .button {
+            width: 100%;
+        }
+    }
+
+    .bonus-info {
+        padding: 24px 16px;
+        margin-bottom: 16px;
+
+        .bonus-info-item::after {
+            height: 38px;
+            top: 5px;
+        }
+
+        .bonus-info-icon {
+            margin-bottom: 9px;
+
+            img {
+                width: 40px;
+            }
+        }
+
+        span {
+            font-size: 13px;
+            line-height: 20px;
+
+            &.price {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .mma-slider {
+        margin: 0 -16px 16px;
+
+        .mma-slider-image {
+            border-radius: 0;
+        }
+
+        .swiper-slide-caption {
+            padding: 0 16px;
+        }
+    }
+
+    .another-bonuses-slider {
+
+        .bonus_item {
+            max-width: 252px;
+            height: auto;
+        }
+
+        &::before,
+        &::after {
+            content: none;
+        }
+
+    }
+
+    .article-content {
+        margin-bottom: 32px;
+
+        .notice {
+            padding: 16px 24px;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+    }
+
+    .no-promocode {
+        padding: 16px;
+        gap: 6px;
+        margin-bottom: 16px;
+    }
+
+    .mma-slider .slider__arrow {
+        top: calc(50% - 80px);
+    }
+
+
+
+}
+
+
+@media (max-width: 576px) {
+    .slider-container {
+        width: auto;
+        margin-bottom: 24px;
+        padding: 24px 0 0;
+        margin-right: -16px;
+        margin-left: -16px;
+
+        .swiper-wrapper {
+            padding: 0 0 0 16px;
+        }
+
+        h2 {
+            margin-left: 16px;
+        }
+    }
+}

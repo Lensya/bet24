@@ -1,0 +1,118 @@
+// display
+@each $v in none, inline, block, inline-block, flex, inline-flex, grid,
+inline-grid {
+    .d-#{$v} {
+        display: $v;
+    }
+}
+
+// justify-content
+@each $v in start, end, center, stretch, between, around, evenly {
+    .justify-#{$v} {
+        @if ($v ==start) or ($v ==end) {
+            justify-content: flex-#{$v};
+        }
+
+        @else if ($v ==between) or ($v ==around) or ($v ==evenly) {
+            justify-content: space-#{$v};
+        }
+
+        @else {
+            justify-content: $v;
+        }
+    }
+}
+
+// align-items
+@each $v in start, end, center, stretch {
+    .items-#{$v} {
+        @if ($v ==start) or ($v ==end) {
+            align-items: flex-#{$v};
+        }
+
+        @else {
+            align-items: $v;
+        }
+    }
+}
+
+// position
+@each $v in relative, absolute, fixed, sticky {
+    .p-#{$v} {
+        position: $v;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.button-yellow {
+    background-color: $yellowColor;
+    font-size: 16px;
+    color: #000;
+    &:hover {
+        background: #FFE22C;
+        color: #000;
+    }
+}
+
+.button-border {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    &:hover {
+        border: 1px solid rgba(255, 255, 255, .5);
+    }
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mr-auto {
+    margin-right: auto;
+}
+
+.violet-text {
+    color: $mainColor;
+}
+
+.h2 {
+    font-family: CeraPro;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+
+h2.h1,
+h1.h1 {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.2px;
+    margin-bottom: 32px;
+}
+
+h2.h1.with-subtitle {
+    margin-bottom: 13px;
+}
+
+
+img.alignright {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+img.alignleft {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}

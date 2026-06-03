@@ -1,0 +1,1103 @@
+.article-title {
+    margin-bottom: 24px;
+    margin-top: 21px;
+
+    h1 {
+        font-size: 52px;
+        line-height: 1;
+        font-weight: 900;
+        margin-bottom: 12px;
+    }
+}
+
+.article-meta {
+    display: flex;
+    color: rgba(0, 0, 0, 0.40);
+    font-size: 14px;
+    align-items: center;
+    gap: 6px;
+
+    .views {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+}
+
+.main-article-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-body {
+    width: calc(100% - 354px);
+    padding-bottom: 0;
+}
+
+.article-side {
+    width: 330px;
+    padding-top: 56px;
+}
+
+/*** top-casinos **/
+
+.top-casinos {
+    padding: 16px 16px 8px;
+    background: #0b051d;
+    border-radius: 6px;
+    margin-bottom: 24px;
+
+    @media (max-width: 991px) {
+        margin-bottom: 32px;
+    }
+
+}
+
+.top-casinos__header {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px
+}
+
+.top-casinos__title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #fff
+}
+
+.top-casinos__all {
+    font-size: 14px;
+    line-height: 114%;
+    font-weight: 600;
+    color: #fff
+}
+
+.top-casinos__item {
+    padding: 8px 0 6px;
+    display: flex;
+    align-items: center;
+    color: #fff
+}
+
+.top-casinos__item:hover .top-casinos__item-name {
+    color: rgba(255, 255, 255, .8)
+}
+
+.top-casinos__item-logo {
+    margin-right: 8px;
+    width: 32px;
+    aspect-ratio: 1/1;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+    border-radius: 3px;
+    overflow: hidden
+}
+
+.top-casinos__item-info {
+    margin-right: auto
+}
+
+.top-casinos__item-name {
+    font-size: 14px;
+    line-height: 129%;
+    font-weight: 500;
+    transition: all .3s ease-in-out 0s;
+}
+
+.top-casinos__item-bonus {
+    font-size: 12px;
+    line-height: 133%;
+    color: #ffe22c;
+}
+
+.top-casinos__item-price {
+    padding: 6px 9px 6px 6px;
+    margin-left: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, .1);
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.top-casinos__item-price-icon {
+    width: 16px;
+    height: 16px;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+}
+
+.top-casinos__item-price-value {
+    font-family: CeraPro;
+    font-size: 13px;
+    line-height: 108%;
+    font-weight: 700;
+    letter-spacing: -.6px;
+}
+
+/**********/
+
+.banner-clickable {
+    display: block;
+
+    picture {
+        display: block;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+}
+
+/***/
+
+.anchors-article {
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: linear-gradient(0deg, #FBFBFB 0%, #FBFBFB 100%), #FFF;
+    padding: 24px 24px 8px 0;
+    margin-bottom: 24px;
+
+    h4 {
+        font-size: 22px;
+        margin-left: 24px;
+        margin-bottom: 0;
+    }
+
+    ul {
+        li {
+            position: relative;
+            padding-left: 45px;
+            padding: 15px 16px 15px 45px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                width: 6px;
+                height: 6px;
+                background-color: #643094;
+                position: absolute;
+                border-radius: 50%;
+                left: 24px;
+                top: calc(50% - 3px);
+            }
+
+            a {
+                color: rgba(0, 0, 0, 0.80);
+
+                &:hover {
+                    color: #643094;
+                }
+            }
+        }
+    }
+}
+
+.freebet-buttons {
+    gap: 16px;
+    padding: 24px 0;
+
+    .button {
+        width: 100%;
+        box-shadow: 0px 0px 23px 0px rgba(79, 26, 128, 0.05);
+        justify-content: flex-end;
+        font-family: CeraPro;
+        font-size: 18px;
+        font-weight: 700;
+        height: 56px;
+        padding: 8px 15px 8px 20px;
+
+        img {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            margin-left: 12px;
+        }
+
+        span:first-child {
+            margin-right: auto;
+        }
+
+        &.white-btn {
+            border: 1px solid rgba(79, 26, 128, 0.05);
+            background: #FFF;
+            color: #643094;
+
+            span:first-child {
+                color: rgba(0, 0, 0, 0.80);
+            }
+        }
+    }
+}
+
+.article-content .freebet-buttons {
+    padding: 10px 0 24px 0;
+}
+
+.bonus-descript {
+    margin-bottom: 24px;
+}
+
+.mma-slider {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 17px;
+    margin-top: 24px;
+
+    .mma-slider-image {
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 17px;
+    }
+
+    .swiper-slide-caption {
+        width: calc(100% - 85px);
+        color: rgba(0, 0, 0, 0.50);
+        font-size: 14px;
+        line-height: 1.28;
+    }
+
+    .slider__arrow {
+        position: absolute;
+        top: calc(50% - 70px);
+        z-index: 2;
+
+        &:not(.swiper-button-disabled) {
+            cursor: pointer;
+        }
+
+        &.swiper-prev {
+            left: 0;
+        }
+
+        &.swiper-next {
+            right: 0;
+        }
+
+
+    }
+
+    .swiper-pagination {
+        width: 85px;
+        left: auto;
+        right: 0;
+        background-color: #fff;
+        font-weight: 700;
+    }
+
+    .swiper-pagination-total {
+        color: rgba(0, 0, 0, 0.40);
+    }
+
+    .swiper-pagination-current {
+        color: #643094;
+    }
+
+}
+
+.promocode-table {
+    border-radius: 7px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    margin-bottom: 32px;
+
+    .thead {
+        background: #643094;
+        color: #fff;
+        padding: 10px 15px;
+        font-weight: 700;
+
+        span {
+            margin-right: 12px;
+        }
+    }
+
+    .td {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+        padding: 7px 15px;
+        font-weight: 700;
+
+        span {
+            margin-right: 12px;
+        }
+
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+.recommend-post {
+    border-top: 1px solid rgba(0, 0, 0, 0.10);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    display: flex;
+    gap: 18px;
+    padding: 16px 0;
+
+    img {
+        border-radius: 8px;
+    }
+
+    span {
+        color: #000;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1.47;
+    }
+}
+
+.milestones {
+    overflow: hidden;
+    padding-top: 5px;
+
+    .milestone {
+        margin-bottom: 32px;
+
+        &-header {
+            color: #643094;
+            font-family: CeraPro;
+            font-size: 32px;
+            font-weight: 900;
+            border-bottom: 4px solid #643094;
+            padding-bottom: 14px;
+            margin-bottom: 12px;
+        }
+    }
+
+    .button {
+        margin: 0 auto 8px;
+        width: 280px;
+    }
+}
+
+.bookmaker {
+    border-radius: 6px;
+    background: #F4F4F4;
+    padding: 1.5rem;
+    margin-bottom: 24px;
+    position: relative;
+    transition: all .3s ease-in-out;
+
+
+    &.focused {
+        background: #FFF;
+        box-shadow: 0px 1px 16px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    >div:first-child {
+        align-items: center;
+    }
+
+    &__logo-wrap {
+        position: relative;
+        max-width: 6.625rem;
+        flex-shrink: 0;
+
+        a {
+            display: block;
+        }
+    }
+
+    .button {
+        box-shadow: 0px 17px 32px 0px rgba(90, 31, 144, 0.2);
+        margin-left: 24px;
+        padding: 16px 21px;
+    }
+
+    &__info {
+        margin-left: 16px;
+        width: 140px;
+        font-family: CeraPro;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.2px;
+            margin-bottom: 10px;
+        }
+
+        >a {
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+    &__rating {
+        font-size: 16px;
+        font-family: CeraPro;
+        font-weight: 700;
+        margin-bottom: 12px;
+        gap: 6px;
+        line-height: 16px;
+
+        span {
+            font-weight: 900;
+        }
+    }
+
+    &__cash {
+        line-height: 1;
+        font-weight: 700;
+        font-family: CeraPro;
+        width: 31%;
+        padding-left: 14px;
+
+        .h2 {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: -0.2px;
+            margin: 5px 0 5px;
+        }
+
+        >div:last-child {
+            max-width: 147px;
+        }
+    }
+}
+
+.place-bet-block {
+    border-radius: 8px;
+    background: #642C98;
+    padding: 24px 44px 24px 24px;
+    margin: 24px 0;
+
+    h4 {
+        color: #FFF;
+        font-size: 24px;
+        line-height: 135%;
+        margin-bottom: 16px;
+    }
+
+    .place-bet-button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        border-radius: 6px;
+        border: 1px rgba(79, 26, 128, 0.05);
+        background: #FFF;
+        box-shadow: 0px 0px 23px 0px rgba(79, 26, 128, 0.05);
+        padding: 8px 16px;
+        color: #643094;
+        font-family: CeraPro;
+        font-size: 18px;
+        font-weight: 700;
+
+        span:first-child {
+            margin-right: auto;
+            color: rgba(0, 0, 0, 0.80);
+            font-size: 15px;
+        }
+
+        img {
+            margin-left: 19px;
+        }
+    }
+
+}
+
+/**********/
+
+.faqs__item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .06)
+}
+
+.faqs__item-question {
+    padding-left: 39px;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 900;
+    color: #643094;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s;
+    position: relative;
+    cursor: pointer
+}
+
+.faqs__item-question:hover {
+    color: #000
+}
+
+.faqs__item-question.is-active {
+    color: #000
+}
+
+.faqs__item-question.is-active::before {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.faqs__item-question::after,
+.faqs__item-question::before {
+    content: "";
+    position: absolute;
+    background: #cacbde;
+    width: 2px;
+    height: 12px;
+    border-radius: 30px;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s
+}
+
+.faqs__item-question::before {
+    top: 6px;
+    left: 6px
+}
+
+.faqs__item-question::after {
+    top: 6px;
+    left: 6px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.faqs__item-answer {
+    height: 0;
+    will-change: height;
+    overflow: hidden;
+    -webkit-transition: all .3s ease-in-out 0s;
+    -o-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s
+}
+
+.faqs__item-content {
+    padding-top: 24px;
+    padding-left: 40px;
+    padding-bottom: 12px;
+    max-width: 745px
+}
+
+.faqs__item-content p:has(+p) {
+    margin-bottom: 12px
+}
+
+
+/******/
+
+.text-content.article-content {
+
+    h2:not([class]) {
+        margin-bottom: 0;
+    }
+
+    blockquote {
+        padding: 24px 32px 24px 68px;
+        position: relative;
+        margin-bottom: 24px;
+
+        &::before {
+            content: "";
+            background: url(../images/mma/qoute.svg) no-repeat 0 0;
+            display: block;
+            width: 70px;
+            height: 52px;
+            position: absolute;
+            left: 0;
+            top: 24px;
+        }
+
+        strong {
+            color: #000;
+            font-family: CeraPro;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+
+    .faqs {
+        margin: 18px 0;
+    }
+}
+
+
+/*****/
+
+.another-bonuses-slider {
+    padding-top: 24px;
+    position: relative;
+    width: calc(100% + 48px);
+    margin: 0 -24px 24px;
+    padding: 0 19px;
+    overflow: hidden;
+
+    .media-item {
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, .1);
+    }
+
+    .another-bonuses {
+        overflow: hidden;
+        padding: 0 5px 10px;
+    }
+
+    h3 {
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+
+    .swiper-btn-next.swiper-button-disabled,
+    .swiper-btn-prev.swiper-button-disabled {
+        opacity: 0;
+    }
+
+    .swiper-btn-next,
+    .swiper-btn-prev {
+        position: absolute;
+        z-index: 3;
+        cursor: pointer;
+        box-shadow: 0px 1px 16px rgba(0, 0, 0, .1);
+        height: 48px;
+        top: 50%;
+        border-radius: 50%;
+    }
+
+    .swiper-btn-prev {
+        left: 5px;
+    }
+
+    .swiper-btn-next {
+        right: 5px;
+    }
+}
+
+.media-item {
+
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 26px;
+    box-shadow: 0px 1px 16px rgba(0, 0, 0, 0.10);
+
+    @media (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
+
+.post-card-text {
+    padding: 21px 24px;
+
+    strong {
+        font-family: CeraPro;
+        color: $mainColor;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+h4 {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: CeraPro;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.33;
+    margin-bottom: 5px;
+}
+
+.post-card:hover {
+    h4 {
+        color: $mainColor;
+    }
+}
+
+.post-date {
+    color: rgba(0, 0, 0, 0.40);
+    font-size: 14px;
+}
+
+.post-views-count {
+    color: rgba(0, 0, 0, 0.40);
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.resent-posts {
+    border-radius: 6px;
+    border: 1px solid rgba(20, 27, 145, 0.10);
+    padding: 16px;
+    margin-bottom: 24px;
+
+    h3 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .post-card {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+        display: block;
+
+        &:last-child {
+            border-bottom: none;
+
+            .post-card-text {
+                padding-bottom: 0;
+            }
+        }
+
+        .post-card-text {
+            padding: 21px 0;
+        }
+
+        h4 {
+            color: #643094;
+            font-size: 16px;
+        }
+
+        &:hover h4 {
+            color: rgba(0, 0, 0, 0.9);
+        }
+    }
+}
+
+.useful-link {
+    padding: 16px 22px;
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    border: 1px solid rgba(100, 48, 148, .2);
+    box-shadow: 0 0 23px rgba(0, 0, 0, .05);
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 138%;
+    font-weight: 700;
+    font-family: CeraPro;
+    color: rgba(0, 0, 0, .8);
+    transition: all .3s ease-in-out 0s;
+}
+
+.useful-link:first-child {
+    margin-top: 0
+}
+
+.useful-link:last-child {
+    margin-bottom: 0
+}
+
+.useful-link:hover {
+    color: #643094
+}
+
+.useful-link__icon {
+    width: 32px;
+    aspect-ratio: 1/1;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
+    flex: none
+}
+
+.article-screenshot {
+    padding: 8px 0;
+}
+
+.article-content hr {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    margin-bottom: 24px;
+}
+
+/****/
+
+@media (min-width: 992px) {
+
+    .for-mobile {
+        display: none;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .article-title h1 {
+        font-size: 40px;
+    }
+
+    .for-mobile {
+        margin-bottom: 32px;
+    }
+
+    .main-article-row {
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    .article-side,
+    .article-body {
+        width: 100%;
+    }
+
+    .article-side {
+        display: none;
+    }
+
+    .swiper-btn-next,
+    .swiper-btn-prev {
+        display: none;
+    }
+}
+
+
+
+
+@media (max-width: 767px) {
+
+    .article-title h1 {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+
+    .article-title {
+        margin-bottom: 16px;
+        margin-top: 16px;
+    }
+
+    .mobile-flex-columns {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .bonus-descript {
+        margin-bottom: 0;
+    }
+
+    .mma-slider {
+        margin-left: -16px;
+        margin-right: -16px;
+
+        .swiper-slide-caption {
+            width: calc(100% - 45px);
+            padding-left: 16px;
+        }
+
+        .swiper-pagination {
+            width: 45px;
+        }
+
+        .mma-slider-image {
+            border-radius: 0;
+        }
+    }
+
+    .freebet-buttons {
+        gap: 8px;
+        flex-wrap: wrap;
+        padding: 16px 0;
+    }
+
+    .article-content .freebet-buttons {
+        padding: 0 0 16px 0;
+    }
+
+    .recommend-post {
+        text-align: center;
+        gap: 17px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        span {
+            color: #000;
+            font-size: 16px;
+        }
+    }
+
+    .bookmaker {
+        flex-wrap: wrap;
+
+        >div:first-child {
+            width: 100%;
+            margin-bottom: 16px;
+            align-items: flex-start;
+        }
+
+        .button {
+            margin-left: 0;
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        &__rating {
+            margin-bottom: 8px;
+        }
+
+        &__cash {
+            width: 100%;
+            margin-bottom: 16px;
+            padding-left: 0;
+        }
+
+        &__logo-wrap {
+            position: relative;
+            max-width: 72px;
+        }
+
+        &__info h3 {
+            font-size: 22px;
+        }
+    }
+
+    .anchors-article {
+        padding: 16px 0 0 0;
+
+        h4 {
+            margin-left: 16px;
+        }
+
+        ul li {
+            padding: 14px 9px 14px 38px;
+
+            &::before {
+                left: 16px;
+            }
+        }
+    }
+
+    .text-content.article-content {
+            padding: 0 0 32px 0;
+
+        blockquote {
+            padding: 24px 16px 24px 20px;
+        }
+    }
+
+
+    .place-bet-block {
+        padding: 16px;
+        margin: 16px 0;
+
+        h4 {
+            font-size: 18px;
+            max-width: 90%;
+            margin-bottom: 30px;
+        }
+
+        .place-bet-button {
+            font-size: 15px;
+            padding: 8px 8px 8px 16px;
+        }
+    }
+
+    .faqs {
+        margin: 24px 0
+    }
+
+    .faqs__item {
+        border-bottom: 1px solid rgba(0, 0, 0, .06);
+        padding: 16px 0;
+    }
+
+    .faqs__item-question {
+        padding-left: 32px;
+        font-size: 16px;
+        line-height: 125%
+    }
+
+    .faqs__item-question.is-active::before {
+        -webkit-transform: translate(0, -50%) rotate(90deg);
+        -ms-transform: translate(0, -50%) rotate(90deg);
+        transform: translate(0, -50%) rotate(90deg)
+    }
+
+    .faqs__item-question::before {
+        top: 50%;
+        left: 8px;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%)
+    }
+
+    .faqs__item-question::after {
+        top: 50%;
+        left: 8px;
+        -webkit-transform: translate(0, -50%) rotate(90deg);
+        -ms-transform: translate(0, -50%) rotate(90deg);
+        transform: translate(0, -50%) rotate(90deg)
+    }
+
+    .faqs__item-content {
+        padding-top: 10px;
+        padding-left: 32px;
+        padding-bottom: 0;
+        font-size: 14px;
+        line-height: 143%
+    }
+
+    .faqs__item-content p:has(+p) {
+        margin-bottom: 8px
+    }
+
+    .another-bonuses-slider {
+        width: auto;
+        margin: 0 -16px 8px;
+        padding: 0 0 0 19px;
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .media-item {
+            max-width: 252px;
+            height: auto;
+            margin-bottom: 16px;
+        }
+        .another-bonuses {
+            padding: 0;
+        }
+    }
+
+   
+
+    .content-table {
+        overflow-x: scroll;
+        margin-right: -16px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        table {
+            width: 496px;
+            margin: 0;
+        }
+    }
+
+    .content-table::-webkit-scrollbar {
+        display: none;
+    }
+
+    .main-image {
+        margin: 0 -16px 16px;
+    }
+
+    .promocode-table {
+        margin-bottom: 16px;
+    }
+
+    .milestones .milestone {
+        margin-bottom: 21px;
+    }
+    .article-screenshot {
+        padding: 0;
+    }
+
+    .resent-posts {
+        margin-bottom: 16px;
+    }
+
+
+}
