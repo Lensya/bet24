@@ -1150,7 +1150,7 @@ function copyPromo() {
       
     });
   });
-
+if (!copiedCross) return;
   copiedCross.addEventListener("click", () => {
     copied.classList.remove("show");
   });
